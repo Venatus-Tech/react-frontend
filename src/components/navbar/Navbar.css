@@ -1,0 +1,101 @@
+.navbar{
+    background-color:#1A1145;
+    margin:0;
+    height: 4rem;
+    display: flex;
+    
+}
+
+.vlogo{
+    
+    max-width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    margin-left: 75%;
+    
+    }
+.v-logo-div{
+    flex:25%;
+    align-items: center;
+}
+.list{
+    display: flex;
+    color:aliceblue;
+   font-size: 0.95rem;
+   color: #585375;
+   flex:75%;
+   padding-left: 12%;
+   
+    
+}
+
+.list-item{
+    margin-left: 2%;
+    text-decoration: none;
+}
+.list-item:hover{
+    color: aliceblue;
+    cursor: pointer;
+}
+.register{
+    
+    background-color: #B92941;
+    margin-left: 22%;
+    border-radius:12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: aliceblue;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    box-shadow: 2px 4px #ee9595;
+}
+.icon-div{
+    flex:33%;
+}
+.icon{
+    color:#585375;
+    display: none;
+    font-size: 2.5rem;
+    margin-left: 45%;  
+    margin-top: 2%;
+}
+.register-text{
+    margin-top:15%;
+    
+}
+.button{
+    background-color: #B92941;
+    box-shadow: 2px 4px #ee9595;
+    border-radius:12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: aliceblue;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    display:none;
+}
+.register:hover{
+    background-color: #a9294f;
+}
+@media screen and (max-width: 780px){
+    .list{
+        display: none;
+    }
+    .vlogo{
+        margin-left: 5%;
+        flex:33%;
+    }
+    .icon{
+        display:inline;
+        
+    }
+    .button{
+        display: inline;
+    }
+}
