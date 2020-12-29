@@ -1,9 +1,10 @@
 import React from "react";
+import Banner from "../../assets/ven-ban.png";
 
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <img src={Banner} alt="Banner" />
     </div>
   );
 }
