@@ -12,3 +12,16 @@
   margin: 5px;
   font-size: 13px;
 }
+
+.copyright {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+  font-size: 11px;
+}
+
+hr {
+  width: 50%;
+  border-color: grey;
+}

@@ -52,6 +52,10 @@ const Footer = () => {
           <p className="small-link">Valorant</p>
           <p className="small-link">CODM</p>
         </Grid>
+        <hr />
+        <Grid item sm={12} className="copyright">
+          <p>&copy; 2020 VENATUS All rights Reserved</p>
+        </Grid>
       </Grid>
     </div>
   );
