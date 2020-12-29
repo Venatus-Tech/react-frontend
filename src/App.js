@@ -1,10 +1,12 @@
 import Navbar from "./components/navbar/Navbar.jsx";
-import Home from "./screens/home/Home.jsx";
+import Home from "./screens/Home/Home.jsx";
 import About from "./screens/aboutUs/AboutUs.jsx";
 import Members from "./screens/members/Members.jsx";
 import Events from "./screens/events/Events.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer/Footer.jsx";
+
 function App() {
   return (
     <Router>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/members" component={Members} />
           <Route path="/events" component={Events} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
