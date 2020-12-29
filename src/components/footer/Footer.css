@@ -5,5 +5,10 @@
   left: 0;
   width: 100%;
   background: black;
-  height: 200px;
+  height: auto;
+}
+
+.small-link {
+  margin: 5px;
+  font-size: 13px;
 }
