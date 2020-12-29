@@ -18,7 +18,7 @@ const Footer = () => {
         >
           <p>Contact Us</p>
           <p className="small-link">Phone No :- +91-8697831037</p>
-          <p className="small-link">Email :- venatus@gmail.com</p>
+          <p className="small-link">Email :- venatus.nsit@gmail.com</p>
         </Grid>
         <Grid
           item
