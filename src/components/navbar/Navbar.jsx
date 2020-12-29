@@ -53,9 +53,9 @@ function Navbar() {
             Blog
           </Link>
         </p>
-        <div className='register'>
-          <p className='register-text'>Register</p>
-        </div>
+      </div>
+      <div className='register'>
+        <p className='register-text'>Register</p>
       </div>
       <div className='button'>
         <p className='register-text'>Register</p>
