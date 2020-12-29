@@ -3,6 +3,7 @@
     margin:0;
     height: 4rem;
     display: flex;
+   
     
 }
 
@@ -60,7 +61,7 @@
     display: none;
     font-size: 2.5rem;
     margin-left: 45%;  
-    margin-top: 2%;
+    margin-top: 0.7rem;
 }
 .register-text{
     margin-top:15%;
@@ -72,7 +73,7 @@
     border-radius:12px;
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: aliceblue;
     margin-bottom: 0.7rem;
@@ -86,16 +87,37 @@
 @media screen and (max-width: 780px){
     .list{
         display: none;
+        
+    }
+    .list-active{
+        display: flex;
+        color:aliceblue;
+        font-size: 0.95rem;
+        text-align: center;
+        z-index: 10;
+        background-color: #1A1145;
+        width: 100%;
+        margin-top: 4rem;
+        flex-direction: column;
+        position: absolute;
+        
+   
     }
     .vlogo{
         margin-left: 5%;
         flex:33%;
+        
     }
     .icon{
         display:inline;
+       
         
     }
     .button{
         display: inline;
+       
+    }
+    .register{
+        display: none;
     }
 }
