@@ -4,9 +4,22 @@
   margin-top: 4rem;
 }
 
-.icon-card{
+.icon-card {
   justify-content: center;
   text-align: center;
   color: #808080;
-  padding: 0px 4.5rem
+  padding: 0px 4.5rem;
+}
+
+.submitButton {
+  background-color: #b92941;
+  border-radius: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: aliceblue;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
 }

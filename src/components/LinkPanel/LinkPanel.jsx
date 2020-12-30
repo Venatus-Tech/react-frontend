@@ -1,5 +1,4 @@
 import React from "react";
-import { Paper, Grid } from "@material-ui/core";
 import fb from "../../assets/fb-icon.png";
 import insta from "../../assets/insta-icon.png";
 import discord from "../../assets/discord-icon.png";
