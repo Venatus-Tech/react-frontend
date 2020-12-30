@@ -1,0 +1,25 @@
+.heading{
+    background-color: #FF9E2C;
+    margin: 2rem 2rem;
+    border-radius: 15px 20px;
+    padding: 0.02px 1rem;
+}
+.heading-one{
+    
+    font-size: 1.3rem;
+}
+
+.gridd{
+    margin: 2rem 6rem 4rem 6rem;
+}
+.paper-ui{
+    background-color: blueviolet;
+}
+.img-future{
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    
+}
+.past-events{
+    padding: 1rem 6rem 2rem 6rem;
+}
