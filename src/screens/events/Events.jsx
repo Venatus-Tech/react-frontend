@@ -106,7 +106,7 @@ function Events() {
           </Grid>
         </div>
       </div>
-      {isOpen ? Modal : null}
+      {isOpen ? <Modal /> : null}
     </div>
   );
 }
