@@ -7,22 +7,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 const useStyles = makeStyles({
   paperStyle: {
-    backgroundColor: "transparent",
+    backgroundColor: "#282051",
     color: "#a685e2",
     borderRadius: "10px",
     width: "76%",
     "&:hover": {
-      transform: "scale(1.1)",
+      transform: "scale(1.01)",
       cursor: "pointer",
       zIndex: "5",
       backgroundColor: "#282051",
     },
   },
   Button: {
-    margin: "0.3rem auto",
-
     display: "block",
-    fontSize: "0.7rem",
+    margin: "0.3rem auto",
+  },
+  Typography: {
+    fontSize: "0.005rem",
   },
 });
 function PaperPer(props) {

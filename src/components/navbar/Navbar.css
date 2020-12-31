@@ -2,10 +2,12 @@
 .navbar {
   background-color: #1a1145;
   margin: 0;
+  top:0;
   height: 4rem;
   display: flex;
   position: fixed;
   width: 100%;
+  z-index: 50;
 }
 
 .vlogo {
