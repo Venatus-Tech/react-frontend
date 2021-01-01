@@ -1,26 +1,23 @@
 import { React, useState } from "react";
 import { Grid, Paper } from "@material-ui/core";
 import "./Events.css";
-import pic from "./futureEventsSample.jpg";
-import pic2 from "./futureEventsSample2.jpg";
-import CardPer from "./Card";
-import pic3 from "./futureEventsSample3.jpg";
-import innoPic from "./pastEventInno.jpg";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import PaperPer from "./Paper";
-import aimbot from "./aimbot.jpg";
-import poke from "./pokeballHoopla.jpg";
-import retro from "./retrogaming.jpg";
-import RelEvent from "./RelEvent.jpg";
 import Modal from "./Modal";
 import PaperSec from "./PaperSec";
-import Gcl from "./GCL.jpg";
+import Arr from "./cardData";
+
+function CardEvent(CardInfo) {
+  return (
+    <Grid item xs={12} sm={6} md={4}>
+      <PaperPer
+        title={CardInfo.title}
+        picture={CardInfo.imgUrl}
+        information={CardInfo.info}
+      ></PaperPer>
+    </Grid>
+  );
+}
 function Events() {
-  const [isOpen, setOpen] = useState(false);
-  function onClicked() {
-    setOpen(true);
-    console.log("clicked");
-  }
   return (
     <div className='event'>
       <div className='heading'>
@@ -29,18 +26,24 @@ function Events() {
       <div className='gridd-one'>
         <Grid container spacing={2} alignItems='center' justify='center'>
           <Grid item xs={12} sm={6} md={4}>
-            <div onClick={onClicked}>
-              <PaperPer picture={pic}></PaperPer>
+            <div>
+              <PaperPer
+                picture={"/EventImages/futureEventsSample3.jpg"}
+              ></PaperPer>
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <div>
-              <PaperPer picture={pic2}></PaperPer>
+              <PaperPer
+                picture={"/EventImages/futureEventsSample.jpg"}
+              ></PaperPer>
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <div>
-              <PaperPer picture={pic3}></PaperPer>
+              <PaperPer
+                picture={"/EventImages/futureEventsSample2.jpg"}
+              ></PaperPer>
             </div>
           </Grid>
         </Grid>
@@ -50,21 +53,36 @@ function Events() {
       </div>
       <div className='past-events'>
         <div className='gridd'>
-          {" "}
+          <Grid container spacing={2} alignItems='center' justify='center'>
+            {Arr.map(CardEvent)}
+          </Grid>
+        </div>
+      </div>
+      {/*<div className='past-events'>
+<div className='gridd'>
           <Grid container spacing={2} alignItems='center' justify='center'>
             <Grid item xs={12} sm={6} md={4}>
-              <div onClick={onClicked}>
-                <PaperPer picture={aimbot} title='Moksha19|Juego'></PaperPer>
+              <div>
+                <PaperPer
+                  picture={"/EventImages/aimbot.jpg"}
+                  title='Moksha19|Juego'
+                ></PaperPer>
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <div>
-                <PaperPer picture={poke} title='Moksha19|Alfresco'></PaperPer>
+                <PaperPer
+                  picture={"/EventImages/pokeballHoopla.jpg"}
+                  title='Moksha19|Alfresco'
+                ></PaperPer>
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <div>
-                <PaperPer picture={RelEvent} title='Relay Event'></PaperPer>
+                <PaperPer
+                  picture={"/EventImages/RelEvent.jpg"}
+                  title='Relay Event'
+                ></PaperPer>
               </div>
             </Grid>
           </Grid>
@@ -73,46 +91,48 @@ function Events() {
           <Grid container spacing={2} alignItems='center' justify='center'>
             <Grid item xs={12} sm={6} md={4}>
               <div>
-                <PaperSec picture={pic3} title='Frolic'></PaperSec>
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <div>
-                <PaperSec picture={retro} title='Retro Gaming'></PaperSec>
-              </div>
-            </Grid>
-          </Grid>
-        </div>
-        <div className='gridd'>
-          <Grid container spacing={2} alignItems='center' justify='center'>
-            <Grid item xs={12} sm={6} md={4}>
-              <div onClick={onClicked}>
-                <PaperSec picture={pic} title='Spectre'></PaperSec>
+                <PaperSec
+                  picture={"/EventImages/futureEventsSample3.jpg"}
+                  title='Frolic'
+                ></PaperSec>
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <div>
                 <PaperSec
-                  picture={Gcl}
+                  picture={"/EventImages/retrogaming.jpg"}
+                  title='Retro Gaming'
+                ></PaperSec>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+        <div className='gridd'>
+          <Grid container spacing={2} alignItems='center' justify='center'>
+            <Grid item xs={12} sm={6} md={4}>
+              <div>
+                <PaperSec
+                  picture={"/EventImages/futureEventsSample.jpg"}
+                  title='Spectre'
+                ></PaperSec>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <div>
+                <PaperSec
+                  picture={"/EventImages/GCL.jpg"}
                   title='Gamers Changing Lives'
                 ></PaperSec>
               </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <div>
-                <PaperSec picture={pic2}></PaperSec>
+                <PaperSec picture={"/EventImages/GCL.jpg"}></PaperSec>
               </div>
             </Grid>
           </Grid>
         </div>
-      </div>
-      {isOpen ? (
-        <Modal
-          close={() => {
-            setOpen(false);
-          }}
-        />
-      ) : null}
+      </div>*/}
     </div>
   );
 }

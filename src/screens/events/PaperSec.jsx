@@ -1,7 +1,7 @@
 import { Paper } from "@material-ui/core";
 import React from "react";
 import "./Events.css";
-import pic from "./futureEventsSample.jpg";
+
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
   Button: {
     display: "block",
-    margin: "0.3rem auto",
+    margin: "0rem auto",
   },
   Typography: {
     fontSize: "0.005rem",
