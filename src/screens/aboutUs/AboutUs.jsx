@@ -16,7 +16,7 @@ function AboutUs() {
             item
             xs={12}
             md={7}
-            style={{ height: "80%", padding: "0 40px", fontFamily: "cursive" }}
+            style={{ height: "80%", padding: "0 40px" }}
           >
             <p>
               Venatus is known to provide high-end gear for event management and

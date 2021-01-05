@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     "&.MuiInputBase-root": {
       color: "white",
     },
+    [theme.breakpoints.down(955)]: {
+      width: "100%",
+    },
   },
   button: {
     backgroundColor: "#b92941",
@@ -52,10 +55,7 @@ function Home() {
       <LinkPanel />
 
       {/* Icon divs start */}
-      <Grid
-        container
-        style={{ width: "70%", margin: "9rem 0 4rem", fontSize: "1.2rem" }}
-      >
+      <Grid container className="home-main-div">
         <IconCard
           icon={icon1}
           text="This subdivision of Venatus deals with outdoor gaming activities. This subdivision features originally created outdoor games, which are played by students in fests and events."
@@ -81,7 +81,7 @@ function Home() {
           justify="center"
           style={{ color: "white", textAlign: "center", marginBottom: "4rem" }}
         >
-          <Grid item style={{ width: "30%" }}>
+          <Grid item className="subscribe-div">
             <h1>Subscribe to our weekly newsletter</h1>
           </Grid>
           <Grid item sm={12}>
