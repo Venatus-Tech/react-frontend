@@ -6,6 +6,13 @@ const arr = [
       "Juego organised their Moksha event - ‘AIMBOT 2019’ which saw surreal participation and an amazingly positive response. We had various high profile games like FIFA 19, CSGO , PUBG and NFS which drew masses towards us like bees to honey. Some of the best players from Delhi showed up to provide an impetus to an already successful ongoing event.The participants thoroughly enjoyed and put everything on line as the competition was stiff. The winners were given Razor gaming accessories. Our sponsors Burger Club, B Natural among several others were extremely happy with us to see a mammoth participation of more than 500. The feedback was positive and there was joy all around.",
   },
   {
+    title: "Matdaan",
+    imgUrl: "/EventImages/matdaan.jpg",
+    info:
+      "It was February and though general elections were far away the Election Committee wanted to raise awareness among college students, the importance of voting. Venatus was one of the only five societies to have been funded by the Election Commission itself for the event. The event was held at the Admin block and had various intriguing games such as an election based Jigsaw puzzle, blindfolded Word formation, Electionary which is basically Pictionary using specific election terms. But the highlight of our event was our Voting booth imitation which was kept at the main entrance of the Admin block, students could vote for their favourite superhero(as we were not allowed to take political partys’ names), covered with cafe curtains this beautiful setup attracted students in large numbers, those who voted had a fake electoral ink applied to their forefingers and gave a proper Election vibe. This event was an instant success, we are applauded by various teachers and we promised that we would never shy away in the future to take up such opportunities to show what Venatus can do as a society.",
+  },
+
+  {
     title: "Pokeball Hoopla",
     imgUrl: "/EventImages/pokeballHoopla.jpg",
     info:
@@ -23,12 +30,7 @@ const arr = [
     info:
       "A unique culmination of gaming and nostalgia is what it's all about. The students hopped on to the bandwagon, played the classics , set a high score and winners took home prizes.",
   },
-  {
-    title: "Matdaan",
-    imgUrl: "/EventImages/matdaan.jpg",
-    info:
-      "It was February and though general elections were far away the Election Committee wanted to raise awareness among college students, the importance of voting. Venatus was one of the only five societies to have been funded by the Election Commission itself for the event. The event was held at the Admin block and had various intriguing games such as an election based Jigsaw puzzle, blindfolded Word formation, Electionary which is basically Pictionary using specific election terms. But the highlight of our event was our Voting booth imitation which was kept at the main entrance of the Admin block, students could vote for their favourite superhero(as we were not allowed to take political partys’ names), covered with cafe curtains this beautiful setup attracted students in large numbers, those who voted had a fake electoral ink applied to their forefingers and gave a proper Election vibe. This event was an instant success, we are applauded by various teachers and we promised that we would never shy away in the future to take up such opportunities to show what Venatus can do as a society.",
-  },
+
   {
     title: "Gamers Changing Lives",
     imgUrl: "/EventImages/GCL.jpg",

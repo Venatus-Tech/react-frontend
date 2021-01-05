@@ -36,7 +36,10 @@ function Navbar() {
           </Link>
         </p>
         <p className='list-item'>
-          <Link to='/' style={{ color: "inherit", textDecoration: "inherit" }}>
+          <Link
+            to='/communities'
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             Communities
           </Link>
         </p>

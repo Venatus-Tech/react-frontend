@@ -1,0 +1,117 @@
+.community{
+    padding-top: 4.5rem;
+    
+}
+.body{
+    overflow-x: hidden;
+}
+.grid-community{
+   padding-left: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    
+}
+.para-icon{
+    
+    text-align: center;
+    
+}
+.icons{
+    display: block;
+    margin: 0 auto;
+     width: 5%;
+}
+.heading-community{
+    color: #D5DDEF;
+    font-size: 3.5vmax;
+    text-align: center;
+}
+.modal-overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+.modal-ui{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ee9595;
+    z-index: 1000;
+}
+.modal-img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.modal-heading{
+    text-align: center;
+    font-size: 2vw;
+}
+.modal-para{
+    font-size: 1.1vw;
+}
+.icon-modal{ position: absolute;
+    top: 0;
+    right: 1.5%;
+    font-size: 1.2rem;
+}
+.icon-modal:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+@media screen and (max-width: 1100px){
+    .modal-heading{
+        text-align: center;
+        font-size: 3vw;
+    }
+    .modal-para{
+        font-size:1.4vw;
+        text-align: center;
+        margin: 0.2rem 1rem;
+    }
+    .modal-img{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+@media screen and (max-width:600px){
+    .modal-heading{
+        text-align: center;
+        font-size: 3vw;
+    }
+    .modal-para{
+        font-size:2.5vw;
+        text-align: center;
+        margin: 0.2rem 1rem;
+    }
+    .modal-img{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .icons{
+        width: 15%;
+    }
+    .para-icon{
+        font-size: 3.5vw;
+    }
+}
+.img-future{
+    width:100%;
+    
+   border-radius: 10px;
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     
+}
+.para-icon{
+
+}
