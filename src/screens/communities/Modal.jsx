@@ -15,7 +15,7 @@ function Modal(props) {
           <i className='icon-modal'>⚔</i>
         </div>
 
-        <img className='modal-img' src={props.imgUrl}></img>
+        <img className='modal-img-community' src={props.imgUrl}></img>
         <h1 className='modal-heading'>{props.title}</h1>
         <p className='modal-para'>{props.info}</p>
         <p className='para-icon'>Discord Link: </p>
