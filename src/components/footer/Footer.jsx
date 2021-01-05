@@ -8,26 +8,15 @@ const Footer = () => {
       <Grid container style={{ padding: "15px" }}>
         <Grid
           item
-          sm={6}
+          xs={12}
           md={4}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <p>Contact Us</p>
-          <p className="small-link">Phone No :- +91-8697831037</p>
-          <p className="small-link">Email :- venatus.nsit@gmail.com</p>
-        </Grid>
-        <Grid
-          item
-          sm={12}
-          md={4}
+          className="google"
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            position: "relative",
+            left: "33.33%",
           }}
         >
           <img
@@ -38,8 +27,28 @@ const Footer = () => {
         </Grid>
         <Grid
           item
-          sm={6}
+          xs={6}
           md={4}
+          className="contact"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            position: "relative",
+            textAlign: "center",
+            right: "33.33%",
+          }}
+        >
+          <p>Contact Us</p>
+          <p className="small-link">Phone No :- +91-8697831037</p>
+          <p className="small-link">Email :- venatus.nsit@gmail.com</p>
+        </Grid>
+
+        <Grid
+          item
+          xs={6}
+          md={4}
+          className="servers"
           style={{
             display: "flex",
             alignItems: "center",
@@ -53,7 +62,7 @@ const Footer = () => {
           <p className="small-link">CODM</p>
         </Grid>
         <hr />
-        <Grid item sm={12} className="copyright">
+        <Grid item xs={12} className="copyright">
           <p>&copy; 2020 VENATUS All rights Reserved</p>
         </Grid>
       </Grid>

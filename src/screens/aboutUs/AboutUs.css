@@ -1,0 +1,51 @@
+.forwardDiv {
+  background: linear-gradient(
+    163.63deg,
+    #4f21b1 31.99%,
+    rgba(109, 93, 142, 0.79) 109.63%
+  );
+  width: 50%;
+  height: 75%;
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  /* box-shadow: 6px 7px 18px 0px pink; */
+  border-radius: 10px;
+}
+
+.back-div {
+  background: linear-gradient(
+    217.17deg,
+    rgba(185, 41, 65, 0.53) 34.46%,
+    rgba(5, 1, 23, 0.58) 79.24%
+  );
+  width: 60% !important;
+  color: white;
+  /* height: 85%; */
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.17) 5px 5px 5px 0px;
+}
+
+@media screen and (max-width: 955px) {
+  .forwardDiv {
+    display: none;
+  }
+
+  .back-div {
+    width: 90% !important;
+  }
+
+  .back-div p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .forwardDiv {
+    height: 350px;
+  }
+}

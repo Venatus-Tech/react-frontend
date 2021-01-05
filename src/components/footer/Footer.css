@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 50px;
   color: white;
   position: relative;
   bottom: 0;
@@ -24,4 +25,36 @@
 hr {
   width: 50%;
   border-color: grey;
+}
+
+.google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 33.33%;
+  position: relative;
+}
+
+.servers {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  right: 33.33%;
+  position: relative;
+}
+
+@media screen and (max-width: 955px) {
+  .google {
+    left: unset;
+  }
+
+  .contact {
+    right: unset;
+  }
 }
