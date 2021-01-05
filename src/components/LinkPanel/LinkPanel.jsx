@@ -12,16 +12,16 @@ const LinkPanel = () => {
         <img src={fb} alt="fb-icon" style={{ padding: "10px 15px" }} />
       </div>
       <div>
-        <img src={insta} alt="insta-icon" className="icons" />
+        <img src={insta} alt="insta-icon" className="icons-panel" />
       </div>
       <div>
-        <img src={discord} alt="discord-icon" className="icons" />
+        <img src={discord} alt="discord-icon" className="icons-panel" />
       </div>
       <div>
-        <img src={youtube} alt="utube-icon" className="icons" />
+        <img src={youtube} alt="utube-icon" className="icons-panel" />
       </div>
       <div>
-        <img src={linkedin} alt="linkedin-icon" className="icons" />
+        <img src={linkedin} alt="linkedin-icon" className="icons-panel" />
       </div>
     </div>
   );
