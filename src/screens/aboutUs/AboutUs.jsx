@@ -4,31 +4,18 @@ import "./AboutUs.css";
 
 function AboutUs() {
   return (
-    <Grid container style={{ paddingTop: "4.5rem", height: "100vh" }}>
+    <Grid container style={{ paddingTop: "4.5rem", minHeight: "100vh" }}>
       <Grid item container justify="center" alignItems="center">
-        <Grid
-          item
-          container
-          style={{
-            background:
-              "linear-gradient(217.17deg, rgba(185, 41, 65, 0.53) 34.46%, rgba(5, 1, 23, 0.58) 79.24%)",
-            width: "60%",
-            color: "white",
-            height: "85%",
-            position: "relative",
-            textAlign: "center",
-            borderRadius: "10px",
-            boxShadow: "5px 5px 16px 6px rgb(255 255 255 / 17%)",
-          }}
-        >
-          <Grid item sm={12}>
+        <Grid item container className="back-div">
+          <Grid item sm={12} style={{ width: "100%" }}>
             <h1 style={{ textShadow: "-3px -2px 0px black", color: "wheat" }}>
               About Us
             </h1>
           </Grid>
           <Grid
             item
-            sm={7}
+            xs={12}
+            md={7}
             style={{ height: "80%", padding: "0 40px", fontFamily: "cursive" }}
           >
             <p>
@@ -53,7 +40,7 @@ function AboutUs() {
               logistics to carry out these events.
             </p>
           </Grid>
-          <Grid item sm={5} className="forwardDiv"></Grid>
+          <Grid item xs={12} md={5} className="forwardDiv"></Grid>
         </Grid>
       </Grid>
     </Grid>
