@@ -6,55 +6,20 @@ const Footer = () => {
   return (
     <div className="footer">
       <Grid container style={{ padding: "15px" }}>
-        <Grid
-          item
-          xs={12}
-          md={4}
-          className="google"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "relative",
-            left: "33.33%",
-          }}
-        >
+        <Grid item xs={12} md={4} className="google">
           <img
             src={google}
             alt="google-play"
             style={{ width: "250px", height: "100px" }}
           />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          md={4}
-          className="contact"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            position: "relative",
-            textAlign: "center",
-            right: "33.33%",
-          }}
-        >
+        <Grid item xs={6} md={4} className="contact">
           <p>Contact Us</p>
           <p className="small-link">Phone No :- +91-8697831037</p>
           <p className="small-link">Email :- venatus.nsit@gmail.com</p>
         </Grid>
 
-        <Grid
-          item
-          xs={6}
-          md={4}
-          className="servers"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
+        <Grid item xs={6} md={4} className="servers">
           <p>Our Servers</p>
           <p className="small-link">CSGO</p>
           <p className="small-link">Minecraft</p>
