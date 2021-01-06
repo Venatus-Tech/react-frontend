@@ -18,7 +18,10 @@
     border-radius: 10px 10px 0 0 ;
     
 }
-.gridd{margin-left: 4rem;}
+.gridd{
+    width: 80%;
+    margin: 0 auto;
+}
 .gridd-one{
     margin-left: 4rem;
     margin-bottom: 2rem;

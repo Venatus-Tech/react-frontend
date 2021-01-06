@@ -2,7 +2,9 @@
     padding-top: 4.5rem;
     
 }
-
+.body{
+    overflow-x: hidden;
+}
 .grid-community{
    padding-left: 5rem;
     margin-top: 4rem;
@@ -41,9 +43,9 @@
     background-color: #ee9595;
     z-index: 1000;
 }
-.modal-img-community{
+.modal-img{
     margin-top: 2rem;
-    width: 90%;
+    width: 0%;
     margin-left: auto;
     margin-right: auto;
     display: block;
