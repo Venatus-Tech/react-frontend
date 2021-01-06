@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     color: "#a685e2",
     borderRadius: "10px",
     width: "76%",
+    margin: "auto",
     "&:hover": {
       transform: "scale(1.05)",
       cursor: "pointer",

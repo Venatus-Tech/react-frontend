@@ -6,7 +6,9 @@
     overflow-x: hidden;
 }
 .grid-community{
-   padding-left: 5rem;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
     
@@ -43,9 +45,9 @@
     background-color: #ee9595;
     z-index: 1000;
 }
-.modal-img{
+.modal-img-community{
     margin-top: 2rem;
-    width: 0%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: block;
