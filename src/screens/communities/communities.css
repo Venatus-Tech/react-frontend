@@ -85,15 +85,56 @@
         display: block;
     }
 }
+
+.img-future{
+    width:100%;
+    
+   border-radius: 10px;
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     
+}
+.para-icon{
+
+}
+.para-link{
+  
+    font-size: 1vw;
+    text-align: center;
+    color: red;
+}
+.modal-link{
+    display: inline;
+ 
+    text-decoration: none;
+    margin: 0 auto;
+    color: cornsilk;
+}
+.modal-link:hover{
+    color: violet;
+}
+.modal-heading-navbar{
+   font-size: 2vw;
+   text-align: center;
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+   color: wheat;
+}
+.para-modal{
+    text-align: center;
+}
 @media screen and (max-width:600px){
     .modal-heading{
         text-align: center;
+
         font-size: 3vw;
     }
     .modal-para{
         font-size:2.5vw;
         text-align: center;
         margin: 0.2rem 1rem;
+    }
+    .modal-heading-navbar{
+        font-size: 5vw;
     }
     .modal-img{
         width: 100%;
@@ -107,14 +148,4 @@
     .para-icon{
         font-size: 3.5vw;
     }
-}
-.img-future{
-    width:100%;
-    
-   border-radius: 10px;
- /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-     
-}
-.para-icon{
-
 }
