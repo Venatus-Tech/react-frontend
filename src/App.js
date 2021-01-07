@@ -5,7 +5,7 @@ import Members from "./screens/members/Members.jsx";
 import Events from "./screens/events/Events.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer/Footer.jsx";
+import Footer from "./components/footer/Footer.jsx";
 import Communities from "./screens/communities/Communities.jsx";
 
 function App() {
