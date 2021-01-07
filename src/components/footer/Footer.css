@@ -12,6 +12,7 @@
 .small-link {
   margin: 5px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .copyright {

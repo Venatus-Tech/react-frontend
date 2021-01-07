@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
+import Familia from "../../assets/about_us_pic.jpg";
 import "./AboutUs.css";
 
 function AboutUs() {
@@ -40,7 +41,15 @@ function AboutUs() {
               logistics to carry out these events.
             </p>
           </Grid>
-          <Grid item xs={12} md={5} className="forwardDiv"></Grid>
+          <Grid item xs={12} md={5} className="forwardDiv">
+            <img
+              src={Familia}
+              alt="Venatus fam"
+              width="100%"
+              height="100%"
+              style={{ borderRadius: "10px" }}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

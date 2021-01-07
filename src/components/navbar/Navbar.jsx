@@ -8,68 +8,63 @@ function Navbar() {
   const [clicked, onClicked] = useState(false);
 
   return (
-    <div className='navbar'>
-      <div className='v-logo-div'>
-        <img src={Logo} alt='venatusLogo' className='vlogo' />
+    <div className="navbar">
+      <div className="v-logo-div">
+        <img src={Logo} alt="venatusLogo" className="vlogo" />
       </div>
       <div className={clicked ? "list-active" : "list"}>
-        <p className='list-item'>
-          <Link to='/' style={{ color: "inherit", textDecoration: "inherit" }}>
+        <p className="list-item">
+          <Link to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
             Home
           </Link>
         </p>
 
-        <p className='list-item'>
+        <p className="list-item">
           <Link
-            to='/about'
+            to="/about"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             About
           </Link>
         </p>
-        <p className='list-item'>
+        <p className="list-item">
           <Link
-            to='/events'
+            to="/events"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             Events
           </Link>
         </p>
-        <p className='list-item'>
+        <p className="list-item">
           <Link
-            to='/communities'
+            to="/communities"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             Communities
           </Link>
         </p>
-        <p className='list-item'>
+        {/* <p className='list-item'>
           <Link
             to='/members'
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             Members
           </Link>
-        </p>
-        <p className='list-item'>
-          <Link to='/' style={{ color: "inherit", textDecoration: "inherit" }}>
-            Blog
-          </Link>
-        </p>
+        </p> */}
       </div>
-      <div className='register'>
-        <p className='register-text'>Register</p>
+      <div className="register">
+        <p className="register-text">Register</p>
       </div>
-      <div className='button'>
-        <p className='register-text'>Register</p>
+      <div className="button">
+        <p className="register-text">Register</p>
       </div>
       <div
-        className='icon-div'
+        className="icon-div"
         onClick={() => {
           onClicked(!clicked);
         }}
       >
-        <FontAwesomeIcon icon={faBars} className='icon' />
+        <FontAwesomeIcon icon={faBars} className="icon" />
       </div>
     </div>
   );
