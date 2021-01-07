@@ -16,7 +16,8 @@ function Modal(props) {
         </div>
 
         <img className='modal-img-navbar' src={props.imgUrl}></img>
-        <h1 className='modal-heading-navbar'>Orientation</h1>
+        <h1 className='modal-heading-navbar'> Orientation</h1>
+        <h1 className='modal-heading-navbar'> 9th January- 4pm</h1>
 
         <p className='para-modal'>
           <a href='https://bit.ly/3omp5W0' className='modal-link'>

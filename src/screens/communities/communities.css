@@ -113,8 +113,10 @@
     color: violet;
 }
 .modal-heading-navbar{
-   font-size: 3vw;
+   font-size: 2vw;
    text-align: center;
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
    color: wheat;
 }
 .para-modal{
@@ -123,6 +125,7 @@
 @media screen and (max-width:600px){
     .modal-heading{
         text-align: center;
+
         font-size: 3vw;
     }
     .modal-para{
