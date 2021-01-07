@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar/Navbar.jsx";
-import Home from "./screens/Home/Home.jsx";
+import Home from "./screens/home/Home.jsx";
 import About from "./screens/aboutUs/AboutUs.jsx";
 import Members from "./screens/members/Members.jsx";
 import Events from "./screens/events/Events.jsx";
