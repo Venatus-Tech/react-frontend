@@ -3,6 +3,7 @@ import Home from "./screens/home/Home.jsx";
 import About from "./screens/aboutUs/AboutUs.jsx";
 import Members from "./screens/members/Members.jsx";
 import Events from "./screens/events/Events.jsx";
+import Form from "./screens/form/Form.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/footer/Footer.jsx";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/members" component={Members} />
           <Route path="/events" component={Events} />
           <Route path="/communities" component={Communities} />
+          <Route path="/regform" component={Form} />
         </Switch>
         <Footer />
       </div>
