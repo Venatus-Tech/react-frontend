@@ -39,59 +39,6 @@ const useStyles = makeStyles((theme) => ({
 const General = () => {
   const classes = useStyles();
 
-  const CustomInputComponent = (props) => {
-    console.log(props);
-    const name = props.name.split(".")[1];
-    return (
-      <TextField
-        label={name[0].toUpperCase() + name.slice(1)}
-        color="primary"
-        {...props}
-      />
-    );
-  };
-
-  const [globalState, setGlobalState] = useState({
-    general: {
-      email: "",
-      name: "",
-      phone: "",
-      rollnum: "",
-      branch: "",
-      campus: "",
-    },
-    juego: {
-      whyJuego: "",
-      gamerTag: "",
-      platform: "",
-    },
-    alfresco: {
-      designGame: "",
-    },
-    tech: {
-      whyTech: "",
-      expectations: "",
-      github: "",
-      techStack: "",
-      problemSolved: "",
-      interests: {
-        app: false,
-        web: false,
-        devops: false,
-        ml: false,
-        design: false,
-      },
-    },
-    production: {
-      experience: "",
-      prevWork: "",
-    },
-    pr: {
-      experience: "",
-      strategies: "",
-    },
-  });
-
   const [interest, setInterest] = useState({
     isJuego: false,
     isAlfresco: false,
@@ -104,20 +51,6 @@ const General = () => {
     setInterest({ ...interest, [event.target.name]: event.target.checked });
   };
 
-  const [buttonAction, setButtonAction] = useState({
-    juegoOn: false,
-    alfrescoOn: false,
-    techOn: false,
-    prodOn: false,
-    prOn: false,
-  });
-
-  const handleButtonCLick = (e) => {
-    setButtonAction({
-      ...buttonAction,
-      [e.target.name]: true,
-    });
-  };
   const [activeTab, setActiveTab] = useState("");
 
   const handleActive = (tab) => {
@@ -155,9 +88,93 @@ const General = () => {
       strategies: "",
     },
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values, { resetForm }) => {
       console.log(values);
       console.log(interest);
+      const general = {
+        email: values.email,
+        name: values.name,
+        phone: values.phone,
+        rollnum: values.rollnum,
+        branch: values.branch,
+        campus: values.campus,
+      };
+      const juego = {
+        whyJuego: values.whyJuego,
+        gamerTag: values.gamerTag,
+        platform: values.platform,
+      };
+      const alfresco = {
+        designGame: values.designGame,
+      };
+      const tech = {
+        whyTech: values.whyTech,
+        expectations: values.expectations,
+        github: values.github,
+        techStack: values.techStack,
+        problemSolved: values.problemSolved,
+        interests: {
+          app: false,
+          web: false,
+          devops: false,
+          ml: false,
+          design: false,
+        },
+      };
+      const production = {
+        experience: values.experienceProd,
+        prevWork: values.prevWork,
+      };
+      const pr = {
+        experience: values.experiencePR,
+        strategies: values.strategies,
+      };
+
+      await db
+        .collection("users")
+        .add(general)
+        .then(async (docRef) => {
+          if (interest.isJuego) {
+            await db
+              .collection("users")
+              .doc(docRef.id)
+              .collection("juego")
+              .add(juego);
+          }
+          if (interest.isAlfresco) {
+            await db
+              .collection("users")
+              .doc(docRef.id)
+              .collection("alfresco")
+              .add(alfresco);
+          }
+          if (interest.isTech) {
+            await db
+              .collection("users")
+              .doc(docRef.id)
+              .collection("tech")
+              .add(tech);
+          }
+          if (interest.isProd) {
+            await db
+              .collection("users")
+              .doc(docRef.id)
+              .collection("production")
+              .add(production);
+          }
+          if (interest.isPR) {
+            await db
+              .collection("users")
+              .doc(docRef.id)
+              .collection("pr")
+              .add(pr);
+          }
+          console.log("Sbkuchh add krdiya");
+          // resetForm()
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     },
   });
 
@@ -176,7 +193,7 @@ const General = () => {
           flexDirection: "column",
         }}
       >
-        <h1>This is a form</h1>
+        <h1 style={{ textAlign: "center" }}>Recruitment form 2021</h1>
         <Grid container>
           <Grid item sm={4}>
             <form className={classes.root} noValidate autoComplete="off">
@@ -416,7 +433,7 @@ const General = () => {
                     textOrientation: "upright",
                   }}
                 >
-                  PR
+                  PR Dept.
                 </span>{" "}
               </Button>
             </Grid>
