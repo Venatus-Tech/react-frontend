@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     padding: "20px",
     flexDirection: "column",
-    background: "#60828a6e",
+    background: "#92c7d461",
     "& .MuiFilledInput-underline:after ": {
       borderBottom: "2px solid #0e0b1f",
     },
