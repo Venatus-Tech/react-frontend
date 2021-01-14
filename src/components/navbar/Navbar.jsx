@@ -67,20 +67,31 @@ function Navbar() {
         </div>
         <div
           className="register"
-          onClick={() => {
-            onTrigger(true);
-          }}
+          // onClick={() => {
+          //   onTrigger(true);
+          // }}
         >
-          <p className="register-text">Register</p>
+          <Link
+            to="/regform"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            <p className="register-text">Register</p>
+          </Link>
         </div>
 
         <div
           className="button"
-          onClick={() => {
-            onTrigger(true);
-          }}
+          // onClick={() => {
+          //   onTrigger(true);
+          // }}
         >
-          <p className="register-text">Register</p>
+          <Link
+            to="/regform"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            {" "}
+            <p className="register-text">Register</p>
+          </Link>
         </div>
         <div
           className="icon-div"
@@ -91,7 +102,7 @@ function Navbar() {
           <FontAwesomeIcon icon={faBars} className="icon" />
         </div>
       </div>
-      {event ? (
+      {/* {event ? (
         <Modal
           title="orientation"
           close={() => {
@@ -99,7 +110,7 @@ function Navbar() {
           }}
           imgUrl="https://i.ibb.co/hfh1k6s/Orientation.png"
         ></Modal>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }

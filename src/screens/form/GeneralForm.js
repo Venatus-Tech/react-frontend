@@ -6,6 +6,9 @@ import { Formik, ErrorMessage, Field, getIn, useFormik } from "formik";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+import { useHistory } from "react-router-dom";
 import "./Form.css";
 
 const db = firebase.firestore();
@@ -53,8 +56,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const General = () => {
   const classes = useStyles();
+
+  const history = useHistory();
+
+  const [open, setOpen] = useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   const [activeTab, setActiveTab] = useState("");
 
@@ -209,6 +227,10 @@ const General = () => {
           console.log("Registration successfull");
           resetForm();
           setActiveTab("");
+          setOpen(true);
+          setTimeout(() => {
+            history.push("/");
+          }, 3000);
         })
         .catch((err) => {
           console.error(err);
@@ -222,6 +244,11 @@ const General = () => {
       style={{ paddingTop: "4.5rem", minHeight: "100vh" }}
       justify="center"
     >
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Registered Successfully!
+        </Alert>
+      </Snackbar>
       <Grid item container className={classes.formDiv}>
         <h1 style={{ textAlign: "center", color: "#ee9595" }}>
           Recruitment form 2021
