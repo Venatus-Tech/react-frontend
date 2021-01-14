@@ -27,25 +27,22 @@ const JuegoFom = () => {
   const classes = useStyles();
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().required("*Required"),
+    ques1: Yup.string().required("*Required"),
   });
 
   const formik = useFormik({
     initialValues: {
-      email: "",
-      name: "",
-      phone: "",
-      rollnum: "",
-      branch: "",
-      campus: "",
+      ques1: "",
+      ques2: "",
+      ques3: "",
     },
     onSubmit: (values) => {
       console.log(values);
-      db.collection("users")
-        .add(values)
-        .then((docRef) => {
-          console.log("added doc hehe", docRef);
-        });
+      //   db.collection("users")
+      //     .add(values)
+      //     .then((docRef) => {
+      //       console.log("added doc hehe", docRef);
+      //     });
     },
     validationSchema,
   });
@@ -68,75 +65,37 @@ const JuegoFom = () => {
         <h1>This is a form</h1>
         <form className={classes.root} noValidate autoComplete="off">
           <TextField
-            label="Email"
+            label="Briefly state why you picked Juego?"
             color="secondary"
-            helperText={formik.errors.email}
+            helperText={formik.errors.ques1}
             onChange={formik.handleChange}
-            value={formik.values.email}
-            error={formik.touched.email && formik.errors.email ? true : false}
+            value={formik.values.ques1}
+            error={formik.touched.ques1 && formik.errors.ques1 ? true : false}
             onBlur={formik.handleBlur}
-            name="email"
-            id="email"
+            name="ques1"
+            id="ques1"
           />
           <TextField
-            label="Name"
+            label="Mention Your Gamer Tag along with Web Link"
             color="secondary"
-            helperText={formik.errors.name}
+            helperText={formik.errors.ques2}
             onChange={formik.handleChange}
-            value={formik.values.name}
-            error={formik.touched.name && formik.errors.name ? true : false}
+            value={formik.values.ques2}
+            error={formik.touched.ques2 && formik.errors.ques2 ? true : false}
             onBlur={formik.handleBlur}
-            name="name"
-            id="name"
-          />
-
-          <TextField
-            helperText={formik.errors.phone}
-            onChange={formik.handleChange}
-            value={formik.values.phone}
-            error={formik.touched.phone && formik.errors.phone ? true : false}
-            onBlur={formik.handleBlur}
-            name="phone"
-            id="phone"
-            label="Phone No."
-            color="secondary"
+            name="ques2"
+            id="ques2"
           />
 
           <TextField
-            helperText={formik.errors.rollnum}
+            helperText={formik.errors.ques3}
             onChange={formik.handleChange}
-            value={formik.values.rollnum}
-            error={
-              formik.touched.rollnum && formik.errors.rollnum ? true : false
-            }
+            value={formik.values.ques3}
+            error={formik.touched.ques3 && formik.errors.ques3 ? true : false}
             onBlur={formik.handleBlur}
-            name="rollnum"
-            id="rollnum"
-            label="Roll No."
-            color="secondary"
-          />
-
-          <TextField
-            helperText={formik.errors.branch}
-            onChange={formik.handleChange}
-            value={formik.values.branch}
-            error={formik.touched.branch && formik.errors.branch ? true : false}
-            onBlur={formik.handleBlur}
-            name="branch"
-            id="branch"
-            label="Branch"
-            color="secondary"
-          />
-
-          <TextField
-            helperText={formik.errors.campus}
-            onChange={formik.handleChange}
-            value={formik.values.campus}
-            error={formik.touched.campus && formik.errors.campus ? true : false}
-            onBlur={formik.handleBlur}
-            name="campus"
-            id="campus"
-            label="Campus"
+            name="ques3"
+            id="ques3"
+            label="Which platform in gaming do you prefer/ have prior experience in?"
             color="secondary"
           />
         </form>
