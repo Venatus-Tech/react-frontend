@@ -100,6 +100,26 @@ const General = () => {
     setInterest({ ...interest, [event.target.name]: event.target.checked });
   };
 
+  const [buttonAction, setButtonAction] = useState({
+    juegoOn: false,
+    alfrescoOn: false,
+    techOn: false,
+    prodOn: false,
+    prOn: false,
+  });
+
+  const handleButtonCLick = (e) => {
+    setButtonAction({
+      ...buttonAction,
+      [e.target.name]: true,
+    });
+  };
+  const [activeTab, setActiveTab] = useState("");
+
+  const handleActive = (tab) => {
+    setActiveTab(tab);
+  };
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("*Required"),
   });
@@ -291,6 +311,11 @@ const General = () => {
           <Grid item sm={8} container>
             <Grid item sm={1}>
               <Button
+                disabled={!interest.isJuego}
+                name="juegoOn"
+                onClick={() => {
+                  handleActive("juego");
+                }}
                 style={{
                   color: "yellow",
                   background: "black",
@@ -307,6 +332,11 @@ const General = () => {
                 </span>{" "}
               </Button>
               <Button
+                disabled={!interest.isAlfresco}
+                name="alfrescoOn"
+                onClick={() => {
+                  handleActive("alfresco");
+                }}
                 style={{
                   color: "yellow",
                   background: "black",
@@ -323,6 +353,11 @@ const General = () => {
                 </span>{" "}
               </Button>
               <Button
+                disabled={!interest.isTech}
+                name="techOn"
+                onClick={() => {
+                  handleActive("tech");
+                }}
                 style={{
                   color: "yellow",
                   background: "black",
@@ -339,6 +374,11 @@ const General = () => {
                 </span>{" "}
               </Button>
               <Button
+                disabled={!interest.isProd}
+                name="prodOn"
+                onClick={() => {
+                  handleActive("prod");
+                }}
                 style={{
                   color: "yellow",
                   background: "black",
@@ -355,6 +395,11 @@ const General = () => {
                 </span>{" "}
               </Button>
               <Button
+                disabled={!interest.isPR}
+                name="prOn"
+                onClick={() => {
+                  handleActive("pr");
+                }}
                 style={{
                   color: "yellow",
                   background: "black",
@@ -372,7 +417,17 @@ const General = () => {
               </Button>
             </Grid>
             <Grid item sm={11} style={{ padding: "0px 20px" }}>
-              <h1>Hello world</h1>
+              {activeTab === "juego" ? (
+                <h1>Juego on</h1>
+              ) : activeTab === "alfresco" ? (
+                <h1>Alfresco on</h1>
+              ) : activeTab === "tech" ? (
+                <h1>Tech on</h1>
+              ) : activeTab === "prod" ? (
+                <h1>Production on</h1>
+              ) : activeTab === "pr" ? (
+                <h1>Public relation on</h1>
+              ) : null}
             </Grid>
           </Grid>
         </Grid>
