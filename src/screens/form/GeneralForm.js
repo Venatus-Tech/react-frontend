@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.8rem",
     color: "red",
   },
+  longAnswer: {
+    width: "50ch",
+    display: "block",
+  },
 }));
 
 const General = () => {
@@ -391,7 +395,7 @@ const General = () => {
                     textOrientation: "upright",
                   }}
                 >
-                  Prod.
+                  Production
                 </span>{" "}
               </Button>
               <Button
@@ -418,15 +422,302 @@ const General = () => {
             </Grid>
             <Grid item sm={11} style={{ padding: "0px 20px" }}>
               {activeTab === "juego" ? (
-                <h1>Juego on</h1>
+                <div>
+                  <p>Briefly state why you picked juego?</p>
+                  <TextField
+                    id="ques1"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="whyJuego"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.whyJuego}
+                    onChange={formik.handleChange}
+                    value={formik.values.whyJuego}
+                    error={
+                      formik.touched.whyJuego && formik.errors.whyJuego
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                  <p>Mention Your Gamer Tag along with Web Link</p>
+                  <TextField
+                    id="ques2"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="gamerTag"
+                    variant="filled"
+                    rows={2}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.gamerTag}
+                    onChange={formik.handleChange}
+                    value={formik.values.gamerTag}
+                    error={
+                      formik.touched.gamerTag && formik.errors.gamerTag
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                  <p>
+                    Which platform in gaming do you prefer/ have prior
+                    experience in?
+                  </p>
+                  <TextField
+                    id="ques3"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="platform"
+                    variant="filled"
+                    rows={2}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.platform}
+                    onChange={formik.handleChange}
+                    value={formik.values.platform}
+                    error={
+                      formik.touched.platform && formik.errors.platform
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
               ) : activeTab === "alfresco" ? (
-                <h1>Alfresco on</h1>
+                <div>
+                  <p>
+                    Prepare the Design and Execution of an outdoor game where
+                    you convert a classic board game or a pen-paper game like
+                    (Tic TAC Toe or Chess etc.) into a life-size version. You
+                    have to keep in mind, how you will maintain the crowd, will
+                    it be a team challenge or a solo play, what all props you
+                    will need etc.
+                  </p>
+                  <TextField
+                    id="ques4"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="designGame"
+                    variant="filled"
+                    rows={8}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.designGame}
+                    onChange={formik.handleChange}
+                    value={formik.values.designGame}
+                    error={
+                      formik.touched.designGame && formik.errors.designGame
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
               ) : activeTab === "tech" ? (
-                <h1>Tech on</h1>
+                <div>
+                  <p>Why do you want to join tech department?</p>
+                  <TextField
+                    id="ques5"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="whyTech"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.whyTech}
+                    onChange={formik.handleChange}
+                    value={formik.values.whyTech}
+                    error={
+                      formik.touched.whyTech && formik.errors.whyTech
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+
+                  <p>What do you expect from tech department?</p>
+                  <TextField
+                    id="ques6"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="expectations"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.expectations}
+                    onChange={formik.handleChange}
+                    value={formik.values.expectations}
+                    error={
+                      formik.touched.expectations && formik.errors.expectations
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+
+                  <p>Github Link</p>
+                  <TextField
+                    id="ques7"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="github"
+                    variant="filled"
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.github}
+                    onChange={formik.handleChange}
+                    value={formik.values.github}
+                    error={
+                      formik.touched.github && formik.errors.github
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+
+                  <p>What is your curent tech stack?</p>
+                  <TextField
+                    id="ques8"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="techStack"
+                    variant="filled"
+                    rows={2}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.techStack}
+                    onChange={formik.handleChange}
+                    value={formik.values.techStack}
+                    error={
+                      formik.touched.techStack && formik.errors.techStack
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                  <p>
+                    Explain an interesting problem you solved using programming.
+                  </p>
+                  <TextField
+                    id="ques9"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="problemSolved"
+                    variant="filled"
+                    rows={5}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.problemSolved}
+                    onChange={formik.handleChange}
+                    value={formik.values.problemSolved}
+                    error={
+                      formik.touched.problemSolved &&
+                      formik.errors.problemSolved
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
               ) : activeTab === "prod" ? (
-                <h1>Production on</h1>
+                <div>
+                  <p>
+                    Mention any prior experience in group discussion or content
+                    writing.
+                  </p>
+                  <TextField
+                    id="ques10"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="experienceProd"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.experienceProd}
+                    onChange={formik.handleChange}
+                    value={formik.values.experienceProd}
+                    error={
+                      formik.touched.experienceProd &&
+                      formik.errors.experienceProd
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                  <p>Add links to your existing works here.(If any)</p>
+                  <TextField
+                    id="ques11"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="prevWork"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.prevWork}
+                    onChange={formik.handleChange}
+                    value={formik.values.prevWork}
+                    error={
+                      formik.touched.prevWork && formik.errors.prevWork
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
               ) : activeTab === "pr" ? (
-                <h1>Public relation on</h1>
+                <div>
+                  <p>Mention any prior experience in public relations.</p>
+                  <TextField
+                    id="ques12"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="experiencePR"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.experiencePR}
+                    onChange={formik.handleChange}
+                    value={formik.values.experiencePR}
+                    error={
+                      formik.touched.experiencePR && formik.errors.experiencePR
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                  <p>
+                    What publicising strategies you\'ll follow for a college
+                    level event?
+                  </p>
+                  <TextField
+                    id="ques13"
+                    label="Answer"
+                    placeholder="Your answer here"
+                    name="strategies"
+                    variant="filled"
+                    rows={4}
+                    multiline
+                    style={{ width: "90ch" }}
+                    helperText={formik.errors.strategies}
+                    onChange={formik.handleChange}
+                    value={formik.values.strategies}
+                    error={
+                      formik.touched.strategies && formik.errors.strategies
+                        ? true
+                        : false
+                    }
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
               ) : null}
             </Grid>
           </Grid>
