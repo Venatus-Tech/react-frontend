@@ -42,10 +42,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     background: "#60828a6e",
     "& .MuiFilledInput-underline:after ": {
-      borderBottom: "2px solid orange",
+      borderBottom: "2px solid #0e0b1f",
     },
     "& .MuiInputLabel-formControl": {
-      color: "orange",
+      color: "#0e0b1f",
     },
     "& .MuiInputBase-root": {
       color: "white",
@@ -55,6 +55,12 @@ const useStyles = makeStyles((theme) => ({
 
 const General = () => {
   const classes = useStyles();
+
+  const [activeTab, setActiveTab] = useState("");
+
+  const handleActive = (tab) => {
+    setActiveTab(tab);
+  };
 
   const [interest, setInterest] = useState({
     isJuego: false,
@@ -66,12 +72,7 @@ const General = () => {
 
   const handleChange = (event) => {
     setInterest({ ...interest, [event.target.name]: event.target.checked });
-  };
-
-  const [activeTab, setActiveTab] = useState("");
-
-  const handleActive = (tab) => {
-    setActiveTab(tab);
+    setActiveTab("");
   };
 
   const validationSchema = Yup.object().shape({
@@ -202,7 +203,9 @@ const General = () => {
       justify="center"
     >
       <Grid item container className={classes.formDiv}>
-        <h1 style={{ textAlign: "center" }}>Recruitment form 2021</h1>
+        <h1 style={{ textAlign: "center", color: "#ee9595" }}>
+          Recruitment form 2021
+        </h1>
         <Grid container>
           <Grid item sm={4}>
             <form className={classes.root} noValidate autoComplete="off">
@@ -286,6 +289,9 @@ const General = () => {
                 label="Campus"
                 color="secondary"
               />
+              <p style={{ color: "#ee9595", fontWeight: "500" }}>
+                Select Department :-
+              </p>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -462,7 +468,7 @@ const General = () => {
                     textOrientation: "upright",
                   }}
                 >
-                  PR Dept.
+                  PR Dept
                 </span>{" "}
               </Button>
             </Grid>
@@ -769,12 +775,20 @@ const General = () => {
           </Grid>
         </Grid>
 
-        <button
-          style={{ width: "30%", height: "30px" }}
+        <Button
+          style={{
+            width: "20%",
+            height: "50px",
+            color: "#0e0b1f",
+            background: "#b92941",
+            fontWeight: "600",
+            fontSize: "20px",
+            margin: "auto",
+          }}
           onClick={formik.handleSubmit}
         >
           Submit
-        </button>
+        </Button>
       </Grid>
     </Grid>
   );
