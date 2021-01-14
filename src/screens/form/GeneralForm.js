@@ -34,6 +34,23 @@ const useStyles = makeStyles((theme) => ({
     width: "50ch",
     display: "block",
   },
+  formDiv: {
+    color: "white",
+    borderRadius: "10px",
+    width: "80%",
+    padding: "20px",
+    flexDirection: "column",
+    background: "#60828a6e",
+    "& .MuiFilledInput-underline:after ": {
+      borderBottom: "2px solid orange",
+    },
+    "& .MuiInputLabel-formControl": {
+      color: "orange",
+    },
+    "& .MuiInputBase-root": {
+      color: "white",
+    },
+  },
 }));
 
 const General = () => {
@@ -184,15 +201,7 @@ const General = () => {
       style={{ paddingTop: "4.5rem", minHeight: "100vh" }}
       justify="center"
     >
-      <Grid
-        item
-        container
-        style={{
-          color: "white",
-          width: "70%",
-          flexDirection: "column",
-        }}
-      >
+      <Grid item container className={classes.formDiv}>
         <h1 style={{ textAlign: "center" }}>Recruitment form 2021</h1>
         <Grid container>
           <Grid item sm={4}>
@@ -337,11 +346,15 @@ const General = () => {
                 onClick={() => {
                   handleActive("juego");
                 }}
-                style={{
-                  color: "yellow",
-                  background: "black",
-                  margin: "10px 0px",
-                }}
+                className={
+                  activeTab === "juego" ? "activeButton" : "interestButton"
+                }
+                // style={{
+                //   color: "#b92941",
+                //   background: "#0f0c1f",
+                //   margin: "10px 0px",
+                //   fontWeight: "800",
+                // }}
               >
                 <span
                   style={{
@@ -358,11 +371,15 @@ const General = () => {
                 onClick={() => {
                   handleActive("alfresco");
                 }}
-                style={{
-                  color: "yellow",
-                  background: "black",
-                  margin: "10px 0px",
-                }}
+                className={
+                  activeTab === "alfresco" ? "activeButton" : "interestButton"
+                }
+                // style={{
+                //   color: "#b92941",
+                //   background: "#0f0c1f",
+                //   margin: "10px 0px",
+                //   fontWeight: "800",
+                // }}
               >
                 <span
                   style={{
@@ -379,11 +396,15 @@ const General = () => {
                 onClick={() => {
                   handleActive("tech");
                 }}
-                style={{
-                  color: "yellow",
-                  background: "black",
-                  margin: "10px 0px",
-                }}
+                className={
+                  activeTab === "tech" ? "activeButton" : "interestButton"
+                }
+                // style={{
+                //   color: "#b92941",
+                //   background: "#0f0c1f",
+                //   margin: "10px 0px",
+                //   fontWeight: "800",
+                // }}
               >
                 <span
                   style={{
@@ -400,11 +421,15 @@ const General = () => {
                 onClick={() => {
                   handleActive("prod");
                 }}
-                style={{
-                  color: "yellow",
-                  background: "black",
-                  margin: "10px 0px",
-                }}
+                className={
+                  activeTab === "prod" ? "activeButton" : "interestButton"
+                }
+                // style={{
+                //   color: "#b92941",
+                //   background: "#0f0c1f",
+                //   margin: "10px 0px",
+                //   fontWeight: "800",
+                // }}
               >
                 <span
                   style={{
@@ -421,11 +446,15 @@ const General = () => {
                 onClick={() => {
                   handleActive("pr");
                 }}
-                style={{
-                  color: "yellow",
-                  background: "black",
-                  margin: "10px 0px",
-                }}
+                className={
+                  activeTab === "pr" ? "activeButton" : "interestButton"
+                }
+                // style={{
+                //   color: activeTab === "pr"? "#0f0c1f":"#b92941",
+                //   background: "#0f0c1f",
+                //   margin: "10px 0px",
+                //   fontWeight: "800",
+                // }}
               >
                 <span
                   style={{
@@ -449,7 +478,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.whyJuego}
                     onChange={formik.handleChange}
                     value={formik.values.whyJuego}
@@ -469,7 +498,7 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.gamerTag}
                     onChange={formik.handleChange}
                     value={formik.values.gamerTag}
@@ -492,7 +521,7 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.platform}
                     onChange={formik.handleChange}
                     value={formik.values.platform}
@@ -522,7 +551,7 @@ const General = () => {
                     variant="filled"
                     rows={8}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.designGame}
                     onChange={formik.handleChange}
                     value={formik.values.designGame}
@@ -545,7 +574,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.whyTech}
                     onChange={formik.handleChange}
                     value={formik.values.whyTech}
@@ -566,7 +595,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.expectations}
                     onChange={formik.handleChange}
                     value={formik.values.expectations}
@@ -586,7 +615,7 @@ const General = () => {
                     name="github"
                     variant="filled"
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.github}
                     onChange={formik.handleChange}
                     value={formik.values.github}
@@ -607,7 +636,7 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.techStack}
                     onChange={formik.handleChange}
                     value={formik.values.techStack}
@@ -629,7 +658,7 @@ const General = () => {
                     variant="filled"
                     rows={5}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.problemSolved}
                     onChange={formik.handleChange}
                     value={formik.values.problemSolved}
@@ -656,7 +685,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.experienceProd}
                     onChange={formik.handleChange}
                     value={formik.values.experienceProd}
@@ -677,7 +706,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.prevWork}
                     onChange={formik.handleChange}
                     value={formik.values.prevWork}
@@ -700,7 +729,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.experiencePR}
                     onChange={formik.handleChange}
                     value={formik.values.experiencePR}
@@ -723,7 +752,7 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "90ch" }}
+                    style={{ width: "80ch" }}
                     helperText={formik.errors.strategies}
                     onChange={formik.handleChange}
                     value={formik.values.strategies}
