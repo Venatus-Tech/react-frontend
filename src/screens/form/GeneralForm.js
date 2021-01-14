@@ -75,8 +75,34 @@ const General = () => {
     setActiveTab("");
   };
 
+  const [techFields, setTechFields] = useState({
+    app: false,
+    web: false,
+    ml: false,
+    design: false,
+    devops: false,
+  });
+
+  const handleTechChange = (event) => {
+    setTechFields({ ...techFields, [event.target.name]: event.target.checked });
+  };
+
+  const phoneRegex = RegExp(
+    /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+  );
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("*Required"),
+    name: Yup.string().required("*Required"),
+    phone: Yup.string()
+      .matches(phoneRegex, "Invalid phone")
+      .required("*Phone is required"),
+    rollnum: Yup.string().required("*Required"),
+    branch: Yup.string().required("*Required"),
+    campus: Yup.string().required("*Required"),
+    expInManagement: Yup.string().required("*Required"),
+    expectationFromSoc: Yup.string().required("*Required"),
+    whyVenatusHowContribute: Yup.string().required("*Required"),
   });
   const formik = useFormik({
     initialValues: {
@@ -86,6 +112,9 @@ const General = () => {
       rollnum: "",
       branch: "",
       campus: "",
+      expInManagement: "",
+      expectationFromSoc: "",
+      whyVenatusHowContribute: "",
       whyJuego: "",
       gamerTag: "",
       platform: "",
@@ -95,11 +124,6 @@ const General = () => {
       github: "",
       techStack: "",
       problemSolved: "",
-      app: false,
-      web: false,
-      devops: false,
-      ml: false,
-      design: false,
       experienceProd: "",
       prevWork: "",
       experiencePR: "",
@@ -107,8 +131,6 @@ const General = () => {
     },
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
-      console.log(values);
-      console.log(interest);
       const general = {
         email: values.email,
         name: values.name,
@@ -131,13 +153,7 @@ const General = () => {
         github: values.github,
         techStack: values.techStack,
         problemSolved: values.problemSolved,
-        interests: {
-          app: false,
-          web: false,
-          devops: false,
-          ml: false,
-          design: false,
-        },
+        interests: techFields,
       };
       const production = {
         experience: values.experienceProd,
@@ -187,8 +203,9 @@ const General = () => {
               .collection("pr")
               .add(pr);
           }
-          console.log("Sbkuchh add krdiya");
-          // resetForm()
+          console.log("Registration successfull");
+          resetForm();
+          setActiveTab("");
         })
         .catch((err) => {
           console.error(err);
@@ -342,6 +359,76 @@ const General = () => {
                 }
                 label="Public Relations"
               />
+              <p style={{ color: "#ee9595", fontWeight: "500" }}>
+                State if you have any prior experience in Event Management.
+              </p>
+              <TextField
+                id="quesend1"
+                label="Answer"
+                placeholder="Your answer here"
+                name="expInManagement"
+                variant="filled"
+                rows={4}
+                multiline
+                style={{ width: "30ch" }}
+                onChange={formik.handleChange}
+                value={formik.values.expInManagement}
+                onBlur={formik.handleBlur}
+                error={
+                  formik.touched.expInManagement &&
+                  formik.errors.expInManagement
+                    ? true
+                    : false
+                }
+                helperText={formik.errors.expInManagement}
+              />
+              <p style={{ color: "#ee9595", fontWeight: "500" }}>
+                What are your expectations from this society?
+              </p>
+              <TextField
+                id="quesend2"
+                label="Answer"
+                placeholder="Your answer here"
+                name="expectationFromSoc"
+                variant="filled"
+                rows={4}
+                multiline
+                style={{ width: "30ch" }}
+                onChange={formik.handleChange}
+                value={formik.values.expectationFromSoc}
+                onBlur={formik.handleBlur}
+                error={
+                  formik.touched.expectationFromSoc &&
+                  formik.errors.expectationFromSoc
+                    ? true
+                    : false
+                }
+                helperText={formik.errors.expectationFromSoc}
+              />
+              <p style={{ color: "#ee9595", fontWeight: "500" }}>
+                Why do you want to be a part of this society and how can you
+                contribute towards it?
+              </p>
+              <TextField
+                id="quesend3"
+                label="Answer"
+                placeholder="Your answer here"
+                name="whyVenatusHowContribute"
+                variant="filled"
+                rows={4}
+                multiline
+                style={{ width: "30ch" }}
+                onChange={formik.handleChange}
+                value={formik.values.whyVenatusHowContribute}
+                onBlur={formik.handleBlur}
+                error={
+                  formik.touched.whyVenatusHowContribute &&
+                  formik.errors.whyVenatusHowContribute
+                    ? true
+                    : false
+                }
+                helperText={formik.errors.whyVenatusHowContribute}
+              />
             </form>
           </Grid>
           <Grid item sm={8} container>
@@ -485,11 +572,15 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.whyJuego}
+                    helperText={
+                      interest.isJuego && formik.values.whyJuego === ""
+                        ? "*Required"
+                        : null
+                    }
                     onChange={formik.handleChange}
                     value={formik.values.whyJuego}
                     error={
-                      formik.touched.whyJuego && formik.errors.whyJuego
+                      interest.isJuego && formik.values.whyJuego === ""
                         ? true
                         : false
                     }
@@ -505,13 +596,17 @@ const General = () => {
                     rows={2}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.gamerTag}
                     onChange={formik.handleChange}
                     value={formik.values.gamerTag}
                     error={
-                      formik.touched.gamerTag && formik.errors.gamerTag
+                      interest.isJuego && formik.values.gamerTag === ""
                         ? true
                         : false
+                    }
+                    helperText={
+                      interest.isJuego && formik.values.gamerTag === ""
+                        ? "*Required"
+                        : null
                     }
                     onBlur={formik.handleBlur}
                   />
@@ -528,15 +623,19 @@ const General = () => {
                     rows={2}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.platform}
                     onChange={formik.handleChange}
                     value={formik.values.platform}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.platform && formik.errors.platform
+                      interest.isJuego && formik.values.platform === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isJuego && formik.values.platform === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
                 </div>
               ) : activeTab === "alfresco" ? (
@@ -558,15 +657,19 @@ const General = () => {
                     rows={8}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.designGame}
                     onChange={formik.handleChange}
                     value={formik.values.designGame}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.designGame && formik.errors.designGame
+                      interest.isAlfresco && formik.values.designGame === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isAlfresco && formik.values.designGame === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
                 </div>
               ) : activeTab === "tech" ? (
@@ -581,15 +684,19 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.whyTech}
                     onChange={formik.handleChange}
                     value={formik.values.whyTech}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.whyTech && formik.errors.whyTech
+                      interest.isTech && formik.values.whyTech === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isTech && formik.values.whyTech === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
 
                   <p>What do you expect from tech department?</p>
@@ -602,15 +709,19 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.expectations}
                     onChange={formik.handleChange}
                     value={formik.values.expectations}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.expectations && formik.errors.expectations
+                      interest.isTech && formik.values.expectations === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isTech && formik.values.expectations === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
 
                   <p>Github Link</p>
@@ -622,15 +733,19 @@ const General = () => {
                     variant="filled"
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.github}
                     onChange={formik.handleChange}
                     value={formik.values.github}
-                    error={
-                      formik.touched.github && formik.errors.github
-                        ? true
-                        : false
-                    }
                     onBlur={formik.handleBlur}
+                    // error={
+                    //   interest.isTech && formik.values.github === ""
+                    //     ? true
+                    //     : false
+                    // }
+                    // helperText={
+                    //   interest.isTech && formik.values.github === ""
+                    //     ? "*Required"
+                    //     : null
+                    // }
                   />
 
                   <p>What is your curent tech stack?</p>
@@ -643,15 +758,19 @@ const General = () => {
                     rows={2}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.techStack}
                     onChange={formik.handleChange}
                     value={formik.values.techStack}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.techStack && formik.errors.techStack
+                      interest.isTech && formik.values.techStack === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isTech && formik.values.techStack === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
                   <p>
                     Explain an interesting problem you solved using programming.
@@ -665,16 +784,69 @@ const General = () => {
                     rows={5}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.problemSolved}
                     onChange={formik.handleChange}
                     value={formik.values.problemSolved}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.problemSolved &&
-                      formik.errors.problemSolved
+                      interest.isTech && formik.values.problemSolved === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isTech && formik.values.problemSolved === ""
+                        ? "*Required"
+                        : null
+                    }
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={techFields.app}
+                        onChange={handleTechChange}
+                        name="app"
+                      />
+                    }
+                    label="App Dev."
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={techFields.web}
+                        onChange={handleTechChange}
+                        name="web"
+                      />
+                    }
+                    label="Web Dev."
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={techFields.ml}
+                        onChange={handleTechChange}
+                        name="ml"
+                      />
+                    }
+                    label="Machine Learning"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={techFields.design}
+                        onChange={handleTechChange}
+                        name="design"
+                      />
+                    }
+                    label="Designing"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={techFields.devops}
+                        onChange={handleTechChange}
+                        name="devops"
+                      />
+                    }
+                    label="Devops"
                   />
                 </div>
               ) : activeTab === "prod" ? (
@@ -692,16 +864,19 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.experienceProd}
                     onChange={formik.handleChange}
                     value={formik.values.experienceProd}
-                    error={
-                      formik.touched.experienceProd &&
-                      formik.errors.experienceProd
-                        ? true
-                        : false
-                    }
                     onBlur={formik.handleBlur}
+                    // error={
+                    //   interest.isProd && formik.values.experienceProd === ""
+                    //     ? true
+                    //     : false
+                    // }
+                    // helperText={
+                    //   interest.isProd && formik.values.experienceProd === ""
+                    //     ? "*Required"
+                    //     : null
+                    // }
                   />
                   <p>Add links to your existing works here.(If any)</p>
                   <TextField
@@ -713,20 +888,16 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.prevWork}
                     onChange={formik.handleChange}
                     value={formik.values.prevWork}
-                    error={
-                      formik.touched.prevWork && formik.errors.prevWork
-                        ? true
-                        : false
-                    }
                     onBlur={formik.handleBlur}
                   />
                 </div>
               ) : activeTab === "pr" ? (
                 <div>
-                  <p>Mention any prior experience in public relations.</p>
+                  <p>
+                    Mention any prior experience in public relations. (If any)
+                  </p>
                   <TextField
                     id="ques12"
                     label="Answer"
@@ -736,14 +907,8 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.experiencePR}
                     onChange={formik.handleChange}
                     value={formik.values.experiencePR}
-                    error={
-                      formik.touched.experiencePR && formik.errors.experiencePR
-                        ? true
-                        : false
-                    }
                     onBlur={formik.handleBlur}
                   />
                   <p>
@@ -759,18 +924,24 @@ const General = () => {
                     rows={4}
                     multiline
                     style={{ width: "80ch" }}
-                    helperText={formik.errors.strategies}
                     onChange={formik.handleChange}
                     value={formik.values.strategies}
+                    onBlur={formik.handleBlur}
                     error={
-                      formik.touched.strategies && formik.errors.strategies
+                      interest.isPR && formik.values.strategies === ""
                         ? true
                         : false
                     }
-                    onBlur={formik.handleBlur}
+                    helperText={
+                      interest.isPR && formik.values.strategies === ""
+                        ? "*Required"
+                        : null
+                    }
                   />
                 </div>
-              ) : null}
+              ) : (
+                <h3>Click on the department tab you selected.</h3>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -783,7 +954,7 @@ const General = () => {
             background: "#b92941",
             fontWeight: "600",
             fontSize: "20px",
-            margin: "auto",
+            margin: "20px auto",
           }}
           onClick={formik.handleSubmit}
         >
