@@ -138,6 +138,9 @@ const General = () => {
         rollnum: values.rollnum,
         branch: values.branch,
         campus: values.campus,
+        expInManagement: values.expInManagement,
+        expectationFromSoc: values.expectationFromSoc,
+        whyVenatusHowContribute: values.whyVenatusHowContribute,
       };
       const juego = {
         whyJuego: values.whyJuego,
@@ -370,7 +373,7 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "30ch" }}
+                style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.expInManagement}
                 onBlur={formik.handleBlur}
@@ -393,7 +396,7 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "30ch" }}
+                style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.expectationFromSoc}
                 onBlur={formik.handleBlur}
@@ -417,7 +420,7 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "30ch" }}
+                style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.whyVenatusHowContribute}
                 onBlur={formik.handleBlur}
