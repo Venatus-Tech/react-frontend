@@ -251,7 +251,7 @@ const General = () => {
       </Snackbar>
       <Grid item container className={classes.formDiv}>
         <h1 style={{ textAlign: "center", color: "#ee9595" }}>
-          Recruitment form 2021
+          Recruitment Form 2021
         </h1>
         <Grid container>
           <Grid item sm={4}>
@@ -400,7 +400,8 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "40ch" }}
+                className="smallMultiline"
+                // style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.expInManagement}
                 onBlur={formik.handleBlur}
@@ -423,7 +424,8 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "40ch" }}
+                className="smallMultiline"
+                // style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.expectationFromSoc}
                 onBlur={formik.handleBlur}
@@ -447,7 +449,8 @@ const General = () => {
                 variant="filled"
                 rows={4}
                 multiline
-                style={{ width: "40ch" }}
+                className="smallMultiline"
+                // style={{ width: "40ch" }}
                 onChange={formik.handleChange}
                 value={formik.values.whyVenatusHowContribute}
                 onBlur={formik.handleBlur}
@@ -462,7 +465,7 @@ const General = () => {
             </form>
           </Grid>
           <Grid item sm={8} container>
-            <Grid item sm={1}>
+            <Grid item xs={12} sm={1} className="buttonsDiv">
               <Button
                 disabled={!interest.isJuego}
                 name="juegoOn"
@@ -589,7 +592,7 @@ const General = () => {
                 </span>{" "}
               </Button>
             </Grid>
-            <Grid item sm={11} style={{ padding: "0px 20px" }}>
+            <Grid item sm={11} style={{ padding: "0px 20px", width: "100%" }}>
               {activeTab === "juego" ? (
                 <div>
                   <p>Briefly state why you picked juego?</p>
@@ -601,7 +604,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     helperText={
                       interest.isJuego && formik.values.whyJuego === ""
                         ? "*Required"
@@ -625,7 +629,8 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.gamerTag}
                     error={
@@ -652,7 +657,8 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.platform}
                     onBlur={formik.handleBlur}
@@ -686,7 +692,8 @@ const General = () => {
                     variant="filled"
                     rows={8}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.designGame}
                     onBlur={formik.handleBlur}
@@ -713,7 +720,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.whyTech}
                     onBlur={formik.handleBlur}
@@ -738,7 +746,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.expectations}
                     onBlur={formik.handleBlur}
@@ -762,7 +771,8 @@ const General = () => {
                     name="github"
                     variant="filled"
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.github}
                     onBlur={formik.handleBlur}
@@ -787,7 +797,8 @@ const General = () => {
                     variant="filled"
                     rows={2}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.techStack}
                     onBlur={formik.handleBlur}
@@ -813,7 +824,8 @@ const General = () => {
                     variant="filled"
                     rows={5}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.problemSolved}
                     onBlur={formik.handleBlur}
@@ -893,7 +905,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.experienceProd}
                     onBlur={formik.handleBlur}
@@ -917,7 +930,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.prevWork}
                     onBlur={formik.handleBlur}
@@ -936,7 +950,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.experiencePR}
                     onBlur={formik.handleBlur}
@@ -953,7 +968,8 @@ const General = () => {
                     variant="filled"
                     rows={4}
                     multiline
-                    style={{ width: "80ch" }}
+                    className="largeMultiline"
+                    // style={{ width: "80ch" }}
                     onChange={formik.handleChange}
                     value={formik.values.strategies}
                     onBlur={formik.handleBlur}
@@ -978,7 +994,7 @@ const General = () => {
 
         <Button
           style={{
-            width: "20%",
+            width: "200px",
             height: "50px",
             color: "#0e0b1f",
             background: "#b92941",

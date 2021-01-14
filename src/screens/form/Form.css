@@ -15,3 +15,24 @@
   margin: 10px 0px !important;
   font-weight: 800 !important;
 }
+
+.smallMultiline {
+  width: 40ch !important;
+}
+
+.largeMultiline {
+  width: 80ch !important;
+}
+
+@media screen and (max-width: 955px) {
+  .buttonsDiv {
+    display: flex;
+    overflow: scroll;
+  }
+  .smallMultiline {
+    width: 25ch !important;
+  }
+  .largeMultiline {
+    width: 25ch !important;
+  }
+}
