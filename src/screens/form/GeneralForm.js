@@ -985,7 +985,9 @@ const General = () => {
                   />
                 </div>
               ) : (
-                <h3>Click on the department tab you selected.</h3>
+                <h3>
+                  Click on the department tab after selecting from the checkbox
+                </h3>
               )}
             </Grid>
           </Grid>
