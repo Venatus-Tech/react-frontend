@@ -105,9 +105,8 @@ const General = () => {
     setTechFields({ ...techFields, [event.target.name]: event.target.checked });
   };
 
-  const phoneRegex = RegExp(
-    /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
-  );
+  // /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+  const phoneRegex = RegExp(/^\+(?:[0-9] ?){6,14}[0-9]$/);
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("*Required"),
