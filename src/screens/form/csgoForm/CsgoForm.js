@@ -145,7 +145,7 @@ const CsgoForm = () => {
       </Snackbar>
       <Grid item container className={classes.formDiv} justify="flex-end">
         <Grid item sm={12} style={{ height: "10%", textAlign: "center" }}>
-          <h1>CSGO FORM</h1>
+          <h1>CSGO 5v5 SCRIM</h1>
         </Grid>
         <Grid
           item
