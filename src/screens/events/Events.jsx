@@ -5,6 +5,7 @@ import PaperPer from "./Paper";
 import Modal from "./Modal";
 import PaperSec from "./PaperSec";
 import Arr from "./cardData";
+import csgobg from "../../assets/csgo-bg.jpg";
 
 function CardEvent(CardInfo) {
   return (
@@ -19,20 +20,18 @@ function CardEvent(CardInfo) {
 }
 function Events() {
   return (
-    <div className='event'>
-      <div className='heading'>
-        <h1 className='heading-one'> Future Events</h1>
+    <div className="event">
+      <div className="heading">
+        <h1 className="heading-one"> Future Events</h1>
       </div>
-      <div className='gridd-one'>
-        <Grid container spacing={2} alignItems='center' justify='center'>
+      <div className="gridd-one">
+        <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} sm={6} md={4}>
             <div>
-              <PaperPer
-                picture={"/EventImages/futureEventsSample3.jpg"}
-              ></PaperPer>
+              <PaperPer picture={csgobg}></PaperPer>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          {/* <Grid item xs={12} sm={6} md={4}>
             <div>
               <PaperPer
                 picture={"/EventImages/futureEventsSample.jpg"}
@@ -45,15 +44,15 @@ function Events() {
                 picture={"/EventImages/futureEventsSample2.jpg"}
               ></PaperPer>
             </div>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
-      <div className='heading'>
-        <h1 className='heading-one'> Past Events</h1>
+      <div className="heading">
+        <h1 className="heading-one"> Past Events</h1>
       </div>
-      <div className='past-events'>
-        <div className='gridd'>
-          <Grid container spacing={2} alignItems='center' justify='center'>
+      <div className="past-events">
+        <div className="gridd">
+          <Grid container spacing={2} alignItems="center" justify="center">
             {Arr.map(CardEvent)}
           </Grid>
         </div>

@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/footer/Footer.jsx";
 import Communities from "./screens/communities/Communities.jsx";
+import CsgoForm from "./screens/form/csgoForm/CsgoForm.js";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/members" component={Members} />
-          <Route path="/events" component={Events} />
+          <Route exact path="/events" component={Events} />
           <Route path="/communities" component={Communities} />
           <Route path="/regform" component={Form} />
+          <Route path="/events/csgo" component={CsgoForm} />
         </Switch>
         <Footer />
       </div>

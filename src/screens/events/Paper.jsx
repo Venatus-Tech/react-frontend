@@ -6,6 +6,8 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import Modal from "./Modal";
+import { useHistory, Link } from "react-router-dom";
+
 const useStyles = makeStyles({
   paperStyle: {
     backgroundColor: "transparent",
@@ -29,6 +31,9 @@ const useStyles = makeStyles({
 });
 function PaperPer(props) {
   const classes = useStyles();
+
+  const history = useHistory();
+
   const [isOpen, setOpen] = useState(false);
   function onClicked() {
     setOpen(true);
@@ -36,19 +41,22 @@ function PaperPer(props) {
   }
   return (
     <div>
-      <div onClick={onClicked}>
-        <Paper className={classes.paperStyle} elevation={15} variant='outline'>
-          <img src={props.picture} alt='event' className='img-future'></img>
-          <Typography variant='h6' align='center'>
+      <div>
+        <Paper className={classes.paperStyle} elevation={15} variant="outline">
+          <img src={props.picture} alt="event" className="img-future"></img>
+          <Typography variant="h6" align="center">
             {props.title}
           </Typography>
-          <Button
-            variant='outlined'
-            color='secondary'
-            className={classes.Button}
-          >
-            Read
-          </Button>
+          <Link to="/events/csgo">
+            <Button
+              variant="outlined"
+              color="secondary"
+              className={classes.Button}
+              // onClick={() => history.push("/events/csgo")}
+            >
+              Register
+            </Button>
+          </Link>
         </Paper>
       </div>
       {isOpen ? (
