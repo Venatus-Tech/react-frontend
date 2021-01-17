@@ -80,9 +80,7 @@ const CsgoForm = () => {
     setOpen(false);
   };
 
-  const phoneRegex = RegExp(
-    /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
-  );
+  const phoneRegex = RegExp(/^\+(?:[0-9] ?){6,14}[0-9]$/);
 
   const validationSchema = Yup.object().shape({
     teamName: Yup.string().required("*Required"),
