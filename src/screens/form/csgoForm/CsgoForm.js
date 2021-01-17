@@ -10,6 +10,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { useHistory } from "react-router-dom";
 import background from "../../../assets/csgo.jpg";
+import styles from "./csgo.module.css";
 
 const db = firebase.firestore();
 
@@ -56,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiFormControl-root": {
       marginRight: "30px",
+    },
+    "@media (max-width:955px)": {
+      width: "100%",
+      textAlign: "center",
     },
   },
   label: {
@@ -144,14 +149,18 @@ const CsgoForm = () => {
         </Alert>
       </Snackbar>
       <Grid item container className={classes.formDiv} justify="flex-end">
-        <Grid item sm={12} style={{ height: "10%", textAlign: "center" }}>
+        <Grid
+          item
+          sm={12}
+          style={{ height: "10%", textAlign: "center", width: "100%" }}
+        >
           <h1>CSGO 5v5 SCRIM</h1>
         </Grid>
         <Grid
           item
           xs={12}
           sm={7}
-          style={{ height: "90%", padding: "20px" }}
+          className={styles.rollDiv}
           container
           justify="center"
           alignItems="center"
