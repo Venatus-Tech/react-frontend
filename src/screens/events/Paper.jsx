@@ -47,7 +47,7 @@ function PaperPer(props) {
           <Typography variant="h6" align="center">
             {props.title}
           </Typography>
-          <Link to="/events/csgo">
+          <Link to={props.link}>
             <Button
               variant="outlined"
               color="secondary"

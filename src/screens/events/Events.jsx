@@ -6,6 +6,7 @@ import Modal from "./Modal";
 import PaperSec from "./PaperSec";
 import Arr from "./cardData";
 import csgobg from "../../assets/csgo-bg.jpg";
+import csgo1v1 from "../../assets/csgo1v1.webp";
 
 function CardEvent(CardInfo) {
   return (
@@ -28,7 +29,20 @@ function Events() {
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} sm={6} md={4}>
             <div>
-              <PaperPer picture={csgobg}></PaperPer>
+              <PaperPer
+                picture={csgobg}
+                title="5v5 SCRIM"
+                link="/events/csgo5"
+              ></PaperPer>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <div>
+              <PaperPer
+                picture={csgo1v1}
+                title="NSUTThon 1v1"
+                link="/events/csgo1"
+              ></PaperPer>
             </div>
           </Grid>
           {/* <Grid item xs={12} sm={6} md={4}>
