@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Communities from "./screens/communities/Communities.jsx";
 import CsgoForm from "./screens/form/csgoForm/CsgoForm.js";
 import CsgoForm1v1 from "./screens/form/csgoForm/CsgoForm1v1.js";
+import CodmForm1v1 from "./screens/form/codmform/CodmForm1v1.js";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
           <Route exact path="/events" component={Events} />
           <Route path="/communities" component={Communities} />
           <Route path="/regform" component={Form} />
-          <Route path="/events/csgo5" component={CsgoForm} />
-          <Route path="/events/csgo1" component={CsgoForm1v1} />
+          {/* <Route path="/events/csgo5" component={CsgoForm} />
+          <Route path="/events/csgo1" component={CsgoForm1v1} /> */}
+          <Route path="/events/codm" component={CodmForm1v1} />
         </Switch>
         <Footer />
       </div>
