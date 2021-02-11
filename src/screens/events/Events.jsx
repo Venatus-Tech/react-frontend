@@ -31,12 +31,30 @@ function Events() {
           <Grid item xs={12} sm={6} md={4}>
             <div>
               <PaperPer
+                picture={"https://i.ibb.co/qsBrxbn/CODM-aimbot.png"}
+                // title=""
+                link="/events/aimbot/codm"
+              ></PaperPer>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <div>
+              <PaperPer
+                picture={"https://i.ibb.co/26GKkY7/valorant-aimbot.png"}
+                // title=""
+                link="/events/aimbot/valorant"
+              ></PaperPer>
+            </div>
+          </Grid>
+          {/* <Grid item xs={12} sm={6} md={4}>
+            <div>
+              <PaperPer
                 picture={codm}
                 // title=""
                 link="/events/codm"
               ></PaperPer>
             </div>
-          </Grid>
+          </Grid> */}
           {/* <Grid item xs={12} sm={6} md={4}>
             <div>
               <PaperPer

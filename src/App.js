@@ -11,6 +11,8 @@ import Communities from "./screens/communities/Communities.jsx";
 import CsgoForm from "./screens/form/csgoForm/CsgoForm.js";
 import CsgoForm1v1 from "./screens/form/csgoForm/CsgoForm1v1.js";
 import CodmForm1v1 from "./screens/form/codmform/CodmForm1v1.js";
+import AmibotCodm from "./screens/form/codmform/aimbotCodm.js";
+import AimBotValorant from "./screens/form/valorantForm/aimbotValorant.js";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
           <Route path="/regform" component={Form} />
           {/* <Route path="/events/csgo5" component={CsgoForm} />
           <Route path="/events/csgo1" component={CsgoForm1v1} /> */}
-          <Route path="/events/codm" component={CodmForm1v1} />
+          {/* <Route path="/events/codm" component={CodmForm1v1} /> */}
+          <Route path="/events/aimbot/valorant" component={AimBotValorant} />
+          <Route path="/events/aimbot/codm" component={AmibotCodm} />
         </Switch>
         <Footer />
       </div>
