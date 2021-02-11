@@ -213,9 +213,9 @@ const CsgoForm = () => {
           <Grid item className={styles.payment}>
             <h4>Payment Methods:</h4>
             <p style={{ fontSize: "1rem" }}>
-              Paytm: +917424961361 (Mudit Mahajan)
+              Paytm: +919873744691 (Kanishk Tomar)
             </p>
-            <p style={{ fontSize: "1rem" }}>UPI: muditmhjn99@okicici</p>
+            <p style={{ fontSize: "1rem" }}>UPI: kanishk.rdps@oksbi</p>
             <h4>Upload Payment Screenshot</h4>
             <input
               type="file"
