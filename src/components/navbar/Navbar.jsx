@@ -65,7 +65,7 @@ function Navbar() {
             </Link>
           </p> */}
         </div>
-        <div
+        {/* <div
           className="register"
           // onClick={() => {
           //   onTrigger(true);
@@ -77,9 +77,9 @@ function Navbar() {
           >
             <p className="register-text">Register</p>
           </Link>
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           className="button"
           // onClick={() => {
           //   onTrigger(true);
@@ -92,7 +92,7 @@ function Navbar() {
             {" "}
             <p className="register-text">Register</p>
           </Link>
-        </div>
+        </div> */}
         <div
           className="icon-div"
           onClick={() => {
