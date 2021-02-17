@@ -28,7 +28,7 @@ function Events() {
       </div>
       <div className="gridd-one">
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={6} md={4}>
+          {/* <Grid item xs={12} sm={6} md={4}>
             <div>
               <PaperPer
                 picture={"https://i.ibb.co/qsBrxbn/CODM-aimbot.png"}
@@ -45,7 +45,7 @@ function Events() {
                 link="/events/aimbot/valorant"
               ></PaperPer>
             </div>
-          </Grid>
+          </Grid> */}
           {/* <Grid item xs={12} sm={6} md={4}>
             <div>
               <PaperPer

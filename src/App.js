@@ -29,8 +29,8 @@ function App() {
           {/* <Route path="/events/csgo5" component={CsgoForm} />
           <Route path="/events/csgo1" component={CsgoForm1v1} /> */}
           {/* <Route path="/events/codm" component={CodmForm1v1} /> */}
-          <Route path="/events/aimbot/valorant" component={AimBotValorant} />
-          <Route path="/events/aimbot/codm" component={AmibotCodm} />
+          {/* <Route path="/events/aimbot/valorant" component={AimBotValorant} />
+          <Route path="/events/aimbot/codm" component={AmibotCodm} /> */}
         </Switch>
         <Footer />
       </div>
