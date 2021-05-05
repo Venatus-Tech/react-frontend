@@ -11,7 +11,9 @@
       margin: 0;
       padding: 0;
     }
-
+     html{
+       font-size:62.5%;
+     }
     body {
       background-image: url(./img/codm.jpg);
 
@@ -118,7 +120,7 @@
       box-sizing: border-box;
     }
 
-    button {
+    .cod-btn {
       background-color: #3baf9f;
       display: block;
 
@@ -133,8 +135,45 @@
       transition: 0.25px;
     }
 
-    button:hover {
+    .cod-btn:hover {
       background-color: #5390f5;
+    }
+
+    @media(max-width:770px)
+    {
+       .cod-btn{
+         margin-left:250px;
+       }
+       .name{
+         margin-left:50px;
+       }
+       .Screenshot{
+         left:450px;
+         top:-30px;
+       }
+    }
+    @media(max-width:500px)
+    {
+       .regform{
+         font-size:4rem;
+       }
+       .name{
+         font-size:3.5rem;
+       }
+       .firstname, .phone, .email{
+         font-size:3rem;
+       }
+       .pay{
+         font-size: 3rem;
+       }
+       .Screenshot{
+         top: -70px;
+         font-size:2.3rem;
+       }
+       .cod-btn{
+         margin-left:200px;
+         font-size:4rem;
+       }
     }
   </style>
 
@@ -228,7 +267,7 @@
           placeholder="Enter Your name "
         /><br />
 
-        <p class="pay">
+        <p class="pay">Entry Fee :₹30/ per person(₹150 for a team)<br>
           For Payment<br />
           NAME : Shreshth <br />
           Paytm no:+91 8375046213 <br />
@@ -243,7 +282,7 @@
           id="payment"
           required
         />
-        <button type="submit">Register Now</button>
+        <button class="cod-btn" type="submit">Register</button>
       </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>

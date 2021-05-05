@@ -11,6 +11,10 @@
       padding: 0;
     }
 
+    html{
+      font-size: 62.5%;
+    }
+
     body {
       background-image: url(./img/valo.jpg);
 
@@ -72,7 +76,7 @@
       left: 320px;
       top: -37px;
       line-height: 40px;
-      width: 200px;
+      /* width: 200; */
       border-radius: 6px;
       padding: 0 22px;
       font-size: 16px;
@@ -84,7 +88,7 @@
       left: 320px;
       top: -37px;
       line-height: 40px;
-      width: 200px;
+      width: 200;
       border-radius: 6px;
       padding: 0 22px;
       font-size: 16px;
@@ -117,7 +121,7 @@
       box-sizing: border-box;
     }
 
-    button {
+    .valo-btn {
       background-color: #3baf9f;
       display: block;
 
@@ -132,8 +136,49 @@
       transition: 0.25px;
     }
 
-    button:hover {
+    .valo-btn:hover {
       background-color: #5390f5;
+    }
+
+    @media(max-width:770px)
+    {
+       .valo-btn{
+         margin-left:250px;
+       }
+       .name{
+         margin-left:50px;
+       }
+       .Screenshot{
+         left:450px;
+         top:-30px;
+       }
+       .regform{
+         font-size:2.5rem;
+       }
+    }
+
+    @media(max-width:500px)
+    {
+       .regform{
+         font-size:4rem;
+       }
+       .name{
+         font-size:3.5rem;
+       }
+       .firstname, .phone, .email{
+         font-size:3rem;
+       }
+       .pay{
+         font-size: 3rem;
+       }
+       .Screenshot{
+         top: -70px;
+         font-size:2.3rem;
+       }
+       .valo-btn{
+         margin-left:200px;
+         font-size:4rem;
+       }
     }
   </style>
 
@@ -162,7 +207,7 @@
           placeholder="Enter Your Team name "
           required
         /><br />
-        <h5 class="name">Contact</h5>
+        <h5 class="name">Captain's Contact No.</h5>
         <input
           class="phone"
           type="text"
@@ -228,7 +273,7 @@
         /><br />
 
         <p class="pay">
-          For Payment<br />
+          For Payment<br />Entry Fee : ₹50/ per person(₹250 for a team)<br>
           NAME : Sanskar Sharma<br />
           Paytm no: +91 7982071555<br />
           UPI Handle - 7982071555@paytm
@@ -243,7 +288,7 @@
           id="payment"
           required
         />
-        <button type="submit">Register Now</button>
+        <button class="valo-btn" type="submit">Register</button>
       </form>
 
       <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
