@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url(./img/valo.jpg);
+
+      margin-top: 30px;
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+
+    .regform {
+      width: 800px;
+      background-color: rgb(0, 0, 0, 0.6);
+      margin: auto;
+
+      color: #ffffff;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      border-radius: 15px 15px 0px 0px;
+    }
+
+    .main {
+      background-color: rgb(0, 0, 0, 0.5);
+      width: 800px;
+
+      margin: auto;
+    }
+
+    form {
+      padding: 10px;
+    }
+
+    #name {
+      width: 100%;
+      height: 100px;
+    }
+
+    .name {
+      margin-left: 25px;
+      margin-top: 30px;
+      width: 250px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .firstname {
+      position: relative;
+      left: 320px;
+      width: 250;
+      top: -37px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+    }
+
+    .phone {
+      position: relative;
+      left: 320px;
+      top: -37px;
+      line-height: 40px;
+      width: 200px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .email {
+      position: relative;
+      left: 320px;
+      top: -37px;
+      line-height: 40px;
+      width: 200px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .Screenshot {
+      position: relative;
+      left: 335px;
+      top: -37px;
+      line-height: 40px;
+      width: 250px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .pay {
+      color: #ffffff;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      text-align: center;
+      background-color: rgb(26 10 23 / 32%);
+      border: 5px solid #9c26e647;
+      margin: auto;
+      padding: auto;
+      border-radius: 6px;
+      width: 533px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3baf9f;
+      display: block;
+
+      margin: 20px 0px 0px 200px;
+      text-align: center;
+      border-radius: 12px;
+      border: 2px solid #366473;
+      padding: 14px 110px;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.25px;
+    }
+
+    button:hover {
+      background-color: #5390f5;
+    }
+  </style>
+
+  <body>
+    <div class="regform">
+      <h1>Registration Form</h1>
+    </div>
+    <div class="main">
+      <form id="valoform">
+        <h5 class="name">Captain Name</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="capname"
+          id="capname"
+          placeholder="Enter Your Captain's name "
+          required
+        /><br />
+
+        <h5 class="name">Team Name</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="teamname"
+          id="teamname"
+          placeholder="Enter Your Team name "
+          required
+        /><br />
+        <h5 class="name">Contact</h5>
+        <input
+          class="phone"
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+        <h2 class="name">Email</h2>
+        <input
+          class="email"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email id"
+          required
+        />
+
+        <h5 class="name">Member 1</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="player1"
+          id="player1"
+          placeholder="Enter Your name "
+          required
+        /><br />
+        <h5 class="name">Member 2</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="first_name"
+          id="player2"
+          placeholder="Enter Your name "
+          required
+        /><br />
+        <h5 class="name">Member 3</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="first_name"
+          id="player3"
+          placeholder="Enter Your name "
+          required
+        /><br />
+        <h5 class="name">Member 4</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="first_name"
+          id="player4"
+          placeholder="Enter Your name "
+          required
+        /><br />
+        <h5 class="name">Member 5</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="first_name"
+          id="player5"
+          placeholder="Enter Your name "
+          required
+        /><br />
+
+        <p class="pay">
+          For Payment<br />
+          NAME : Sanskar Sharma<br />
+          Paytm no: +91 7982071555<br />
+          UPI Handle - 7982071555@paytm
+        </p>
+
+        <h5 class="name">Add Screenshot of payment</h5>
+        <input
+          class="Screenshot"
+          type="File"
+          accept="image/*"
+          name="payment"
+          id="payment"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+
+      <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+      <script src="./js/valo.js"></script>
+    </div>
+  </body>
+</html>

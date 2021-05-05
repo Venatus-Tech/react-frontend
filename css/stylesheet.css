@@ -1,0 +1,523 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131A27;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'helvetica-compressed', sans-serif;
+}
+
+/* Global css for a */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navbar CSS */
+/* -VirenderNayal */
+
+.navbar{
+    line-height: 15px;
+    background-color: transparent;
+}
+
+.logo{
+    position: absolute;
+    top : 1.5rem;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    float:right;
+    margin-right: 50px;
+}
+
+.nav-item{
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.list-link{
+    text-decoration: none;
+    color: white;
+}
+
+.image{
+   width: 60px;
+   height: 60px;
+   margin-left: 50px;
+   border: 2px solid white;
+   border-radius: 30px;
+   transition: transform ease-in-out 0.5s;
+}
+
+.image:hover{
+    transform: scale(1.5);
+}
+
+.donate-button{
+    background-color: #b72a2a80;
+    color: yellow;
+    border: 2px solid white;
+    border-radius: 0px;
+    padding: 18px 40px;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 green;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.donate-button:hover{
+    color: #fff;
+    border: 2px solid white;
+    box-shadow: inset 400px 0 0 0 green;
+}
+
+/* <========================================> */
+
+/* Donate form Styling */
+.popupForm{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formContainer{
+    background-color: white;
+    width: 600px;
+    height: 650px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.formContainer input{  
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 40px;
+    color: #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close:hover{
+    color: #666;    
+}
+
+.payDetails{
+    border: 1px solid grey;
+    margin: 30px 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.payDetails h3{
+    width: 100%;
+}
+
+.payDetails div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.payDetails img{
+    width: 65px;
+    height: 50px;
+    margin: 6px;
+}
+
+#donateFormButton{
+    background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 8px 24px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+    font-size: 15px;
+}
+
+#donateFormButton:hover{
+    background-color: white;
+    cursor: pointer;
+	color: blue;
+	border: 2px solid blue;
+}
+
+
+/* <=======================================> */
+
+.header {
+    background: linear-gradient(to right, rgba(20, 30, 48, 0.7) , rgba(36, 59, 85, 0.7)),url(../img/headerBack.gif);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    justify-items: center;
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+
+}
+.heading {
+    height: 100vh;
+    width: 50%;
+    justify-content: center;
+}
+.heading-content{
+    margin-top: 10%;
+    margin-left: 22%;
+}
+
+.main-heading{
+    line-height: 1;
+    padding: 0%;
+    padding-bottom: 0%;
+    font-size: 250px;
+    letter-spacing: 20px;
+    /* added by virender nayal */
+    margin-top: -60px;
+    font-family: 'Poppins', sans-serif;
+}
+.second-heading{
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.8;
+    margin-left: 70px;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+.container {
+    margin-top: 10%;
+    margin-left: 40%;
+
+}
+.button_slide {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0px;
+    padding: 18px 40px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #E15359;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+
+.slide_right:hover {
+      color: #fff;
+      border: 2px solid #E15359;
+      
+    box-shadow: inset 400px 0 0 0 #E15359;
+}
+
+.clock-day:before {
+    content: var(--timer-day);
+}
+.clock-hours:before {
+    content: var(--timer-hours);
+}
+.clock-minutes:before {
+    content: var(--timer-minutes);
+}
+.clock-seconds:before {
+    content: var(--timer-seconds);
+}
+.clock-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: rgba(20, 30, 48, 1);
+    border-radius: 5px;
+    padding: 30px 10px;
+    display: flex;
+}
+.clock-col {
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 50px;
+    min-width: 90px;
+    position: relative;
+}
+.clock-col:not(:last-child):before, .clock-col:not(:last-child):after {
+    content: "";
+    background-color: rgba(255, 255, 255, .3);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: -42px;
+}
+.clock-col:not(:last-child):before {
+    top: 35%;
+}
+.clock-col:not(:last-child):after {
+    top: 50%;
+}
+.clock-timer:before {
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+ }
+.clock-label {
+  font-family: 'Poppins',sans-serif;
+    color: rgba(255, 255, 255, .35);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 10px;
+ }
+ @media (max-width: 825px) {
+    .clock-container {
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+    .clock-col + .clock-col {
+      margin-top: 20px;
+   }
+    .clock-col:before, .clock-col:after {
+      display: none !important;
+   }
+ }
+  
+
+
+.about {
+      display: flex;
+      flex-direction: column;
+      height: 120vh;
+      width: 100%;
+}
+
+#myVideo{
+  z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+}
+
+#myVideo video {
+  min-width: 100%;
+  min-height: 120%;
+}
+
+.overlay{
+  position: absolute;
+    height: 120vh;
+    width: 100%;
+    background-color: rgba(20, 30, 48, 0.3);
+}
+.content{
+  z-index: 2;
+}
+
+
+.about-heading{
+    font-family: 'helvetica-compressed', sans-serif;
+    margin-top: 8%;
+    margin-left: 3% ;
+    z-index: 999;
+}
+
+.img{
+    display: f;
+    height: 300px;
+}
+
+.about-heading-main{
+    line-height: 1;
+    font-size: 180px;
+    letter-spacing: 10px;
+    font-weight:700;
+}
+
+.about-content {
+    
+    display: flex;
+    flex-direction: row;
+}
+.about-para {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3%;
+    width: 50%;
+    font-size: 18px;
+    margin-top: 5%;
+}
+
+
+.img-abt{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.abt-img {
+    height: 300px;
+}
+
+
+#myVideo video {
+  min-width: 100%;
+  min-height: 120%;
+}
+
+.overlay{
+  position: absolute;
+    height: 120vh;
+    width: 100%;
+    background-color: rgba(20, 30, 48, 0.3);
+}
+.content{
+  z-index: 2;
+}
+
+.games{
+    height: 120vh;
+    width: 100%;
+    display: flex;
+}
+.video-bg-valo{
+    z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 120vh;
+      overflow: hidden;
+  }
+  
+.video-bg-valo video {
+    min-width: 100%;
+    min-height: 120%;
+  }
+  
+.overlay-valo{
+    position: absolute;
+      height: 120vh;
+      width: 100%;
+      background-color: rgba(20, 30, 48, 0.3);
+}
+.content-valo{
+    z-index: 2;
+}
+
+.heading-content-valo{
+    margin-left: 65%;
+    margin-top: 65%;
+}
+.main-heading-valo{
+    font-size: 150px;
+    letter-spacing: 10px;
+}
+.container-valo{
+    padding-left: 140px;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.video-bg-valo > video {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+@media screen and (max-aspect-ratio: 1920/1080) {
+    .video-container-valo > video {
+      height: 120%;
+    }
+}
+@media screen and (min-aspect-ratio: 1920/1080) {
+    .video-bg-valo > video {
+      width: 100%;
+    }
+}
+
+.main-heading-cod{
+    text-align: center;
+    font-size: 150px;
+}
+
+.heading-content-cod{
+    margin-top: 25%;
+    margin-left: 150px;
+}
+.container-cod{
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+.heading-content-chess{
+    margin-top: 25%;
+    margin-left: 150px;
+}
+
+.container-chess{
+    letter-spacing: 0;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+
+
+.footer {
+    font-family: 'Poppins',sans-serif;
+    height: 8vh;
+    background-color: #131A27;
+    align-items: center;
+}
+
+.footer-text{
+    font-weight: 300;
+    margin-top: 35px;
+    margin-left: 40%;
+}
+
+
+
+

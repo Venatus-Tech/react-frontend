@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url(./img/chess.jpg);
+      margin-top: 30px;
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+
+    .regform {
+      width: 800px;
+      background-color: rgb(0, 0, 0, 0.6);
+      margin: auto;
+
+      color: #ffffff;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      border-radius: 15px 15px 0px 0px;
+    }
+
+    .main {
+      background-color: rgb(0, 0, 0, 0.5);
+      width: 800px;
+      margin: auto;
+    }
+
+    form {
+      padding: 10px;
+    }
+
+    .name {
+      margin-left: 25px;
+      margin-top: 30px;
+      width: 250px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .firstname {
+      position: relative;
+      left: 320px;
+      width: 250px;
+      top: -37px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+    }
+
+    .phone {
+      position: relative;
+      left: 320px;
+      top: -37px;
+      line-height: 40px;
+      width: 250px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .email {
+      position: relative;
+      left: 320px;
+      top: -37px;
+      line-height: 40px;
+      width: 250px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .username {
+      position: relative;
+      left: 320px;
+      width: 250px;
+      top: -37px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .rating {
+      position: relative;
+      left: 320px;
+      width: 250px;
+      top: -37px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .Screenshot {
+      position: relative;
+      left: 335px;
+      top: -37px;
+      line-height: 40px;
+      width: 250px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .pay {
+      color: #ffffff;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      text-align: center;
+      background-color: rgb(26 10 23 / 32%);
+      border: 5px solid #9c26e647;
+      margin: auto;
+      padding: auto;
+      border-radius: 6px;
+      width: 533px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3baf9f;
+      display: block;
+
+      margin: 20px 0px 0px 200px;
+      text-align: center;
+      border-radius: 12px;
+      border: 2px solid #366473;
+      padding: 14px 110px;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.25px;
+    }
+
+    button:hover {
+      background-color: #5390f5;
+    }
+  </style>
+
+  <body>
+    <div class="regform">
+      <h1>Registration Form</h1>
+    </div>
+    <div class="main">
+      <form id="chessform">
+        <h5 class="name">Name</h5>
+        <input
+          class="firstname"
+          type="text"
+          name="name"
+          required
+          id="name"
+          placeholder="Enter Your name "
+        /><br />
+
+        <h5 class="name">Contact</h5>
+        <input
+          class="phone"
+          type="text"
+          name="phone"
+          required
+          id="phone"
+          placeholder="Enter your phone number"
+        />
+
+        <h2 class="name">Email</h2>
+        <input
+          class="email"
+          type="email"
+          name="email"
+          required
+          id="email"
+          placeholder="Enter your email id"
+        />
+
+        <h5 class="name">Lichess Username</h5>
+        <input
+          class="username"
+          type="text"
+          name="lichess_user"
+          id="lichess_user"
+          required
+          placeholder="Enter Your Lichess Username  "
+        /><br />
+
+        <h5 class="name">Lichess Blitz Rating</h5>
+        <input
+          class="rating"
+          type="number"
+          name="lichess_rating"
+          id="lichess_rating"
+          required
+          placeholder="Enter Your Lichess Blitz Rating "
+        /><br />
+
+        <p class="pay">
+          For Payment<br />
+          NAME : Shagun Chandra<br />
+          Paytm no: +91 9818107783<br />
+          UPI Handle : 9818107783@paytm
+        </p>
+        <h5 class="name">Add Screenshot of payment</h5>
+        <input
+          class="Screenshot"
+          type="File"
+          accept="image/*"
+          name="payment"
+          id="payment"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script src="./js/chess.js"></script>
+  </body>
+</html>
