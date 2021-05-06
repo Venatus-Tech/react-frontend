@@ -5,12 +5,16 @@
     box-sizing: border-box;
 }
 
+html{
+   font-size: 62.5%;
+}
+
 body {
     background-color: #131A27;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: 'helvetica-compressed', sans-serif;
-}
+} 
 
 /* Global css for a */
 a {
@@ -22,7 +26,7 @@ a {
 /* -VirenderNayal */
 
 .navbar{
-    line-height: 15px;
+    line-height: 1.5rem;
     background-color: transparent;
 }
 
@@ -35,12 +39,12 @@ a {
     display: flex;
     list-style: none;
     float:right;
-    margin-right: 50px;
+    margin-right: 5rem;
 }
 
 .nav-item{
-    padding: 20px;
-    border-radius: 2px;
+    padding: 2rem;
+    border-radius: 0.2rem;
 }
 
 .list-link{
@@ -49,11 +53,11 @@ a {
 }
 
 .image{
-   width: 60px;
-   height: 60px;
-   margin-left: 50px;
-   border: 2px solid white;
-   border-radius: 30px;
+   width: 6rem;
+   height: 6rem;
+   margin-left: 5rem;
+   border: 0.2rem solid white;
+   border-radius: 3rem;
    transition: transform ease-in-out 0.5s;
 }
 
@@ -64,14 +68,14 @@ a {
 .donate-button{
     background-color: #b72a2a80;
     color: yellow;
-    border: 2px solid white;
-    border-radius: 0px;
-    padding: 18px 40px;
+    border: 0.2rem solid white;
+    border-radius: 0rem;
+    padding: 1.8rem 4rem;
     display: inline-block;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bolder;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 green;
     -webkit-transition: ease-out 0.4s;
@@ -82,7 +86,7 @@ a {
 .donate-button:hover{
     color: #fff;
     border: 2px solid white;
-    box-shadow: inset 400px 0 0 0 green;
+    box-shadow: inset 40rem 0 0 0 green;
 }
 
 /* <========================================> */
@@ -103,28 +107,28 @@ a {
 
 .formContainer{
     background-color: white;
-    width: 600px;
-    height: 650px;
-    border-radius: 6px;
+    width: 60rem;
+    height: 65rem;
+    border-radius: 0.6rem;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     position: relative;
 }
 
 .formContainer input{  
     width: 50%;
     display: block;
-    margin: 10px auto;
-    padding: 8px;
-    border: 1px solid grey;
-    border-radius: 4px;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    border: 0.1rem solid grey;
+    border-radius: 0.4rem;
 }
 
 .close{
     position: absolute;
     top: 0;
-    right: 14px;
-    font-size: 40px;
+    right: 1.4rem;
+    font-size: 4rem;
     color: #333;
     transform: rotate(45deg);
     cursor: pointer;
@@ -135,9 +139,9 @@ a {
 }
 
 .payDetails{
-    border: 1px solid grey;
-    margin: 30px 5px;
-    padding: 10px;
+    border: 0.1rem solid grey;
+    margin: 3rem 0.5rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -149,32 +153,32 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 0.8rem;
 }
 
 .payDetails img{
-    width: 65px;
-    height: 50px;
-    margin: 6px;
+    width: 6.5rem;
+    height: 5rem;
+    margin: 0.6rem;
 }
 
 #donateFormButton{
     background-color: blue;
-	border: 2px solid white;
-	border-radius: 30px;
+	border: 0.2rem solid white;
+	border-radius: 3rem;
 	text-decoration: none;
-	padding: 8px 24px;
+	padding: 0.8rem 2.4rem;
 	color: white;
-	margin-top: 10px;
+	margin-top: 1rem;
 	display: inline-block;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 #donateFormButton:hover{
     background-color: white;
     cursor: pointer;
 	color: blue;
-	border: 2px solid blue;
+	border: 0.2rem solid blue;
 }
 
 
@@ -212,19 +216,19 @@ a {
     line-height: 1;
     padding: 0%;
     padding-bottom: 0%;
-    font-size: 250px;
-    letter-spacing: 20px;
+    font-size: 25rem;
+    letter-spacing: 2rem;
     /* added by virender nayal */
-    margin-top: -60px;
+    margin-top: -6rem;
     font-family: 'Poppins', sans-serif;
 }
 .second-heading{
     font-family: 'Poppins', sans-serif;
     line-height: 0.8;
-    margin-left: 70px;
-    font-size: 25px;
+    margin-left: 7rem;
+    font-size: 2.5rem;
     font-weight: 200;
-    letter-spacing: 5px;
+    letter-spacing: 0.5rem;
     text-transform: uppercase;
 }
 
@@ -239,11 +243,11 @@ a {
     color: #fff;
     border: 2px solid #fff;
     border-radius: 0px;
-    padding: 18px 40px;
+    padding: 1.8rem 4rem;
     display: inline-block;
     font-family: "Lucida Console", Monaco, monospace;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 #E15359;
     -webkit-transition: ease-out 0.4s;
@@ -253,9 +257,9 @@ a {
 
 .slide_right:hover {
       color: #fff;
-      border: 2px solid #E15359;
+      border: 0.2rem solid #E15359;
       
-    box-shadow: inset 400px 0 0 0 #E15359;
+    box-shadow: inset 40rem 0 0 0 #E15359;
 }
 
 .clock-day:before {
@@ -271,29 +275,29 @@ a {
     content: var(--timer-seconds);
 }
 .clock-container {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     background-color: rgba(20, 30, 48, 1);
-    border-radius: 5px;
-    padding: 30px 10px;
+    border-radius: 0.5rem;
+    padding: 3rem 1rem;
     display: flex;
 }
 .clock-col {
     text-align: center;
-    margin-right: 40px;
-    margin-left: 50px;
-    min-width: 90px;
+    margin-right: 4rem;
+    margin-left: 5rem;
+    min-width: 9rem;
     position: relative;
 }
 .clock-col:not(:last-child):before, .clock-col:not(:last-child):after {
     content: "";
     background-color: rgba(255, 255, 255, .3);
-    height: 5px;
-    width: 5px;
+    height: 0.5rem;
+    width: 0.5rem;
     border-radius: 50%;
     display: block;
     position: absolute;
-    right: -42px;
+    right: -4.2rem;
 }
 .clock-col:not(:last-child):before {
     top: 35%;
@@ -304,24 +308,24 @@ a {
 .clock-timer:before {
     font-family: 'Poppins',sans-serif;
     color: #fff;
-    font-size: 3rem;
+    font-size: 4.8rem;
     text-transform: uppercase;
  }
 .clock-label {
   font-family: 'Poppins',sans-serif;
     color: rgba(255, 255, 255, .35);
     text-transform: uppercase;
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 1.6rem;
+    margin-top: 1rem;
  }
  @media (max-width: 825px) {
     .clock-container {
       flex-direction: column;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
    }
     .clock-col + .clock-col {
-      margin-top: 20px;
+      margin-top: 2rem;
    }
     .clock-col:before, .clock-col:after {
       display: none !important;
@@ -370,13 +374,13 @@ a {
 
 .img{
     display: f;
-    height: 300px;
+    height: 30rem;
 }
 
 .about-heading-main{
     line-height: 1;
-    font-size: 180px;
-    letter-spacing: 10px;
+    font-size: 18rem;
+    letter-spacing: 1rem;
     font-weight:700;
 }
 
@@ -389,7 +393,7 @@ a {
     font-family: 'Poppins', sans-serif;
     margin-left: 3%;
     width: 50%;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-top: 5%;
 }
 
@@ -399,7 +403,7 @@ a {
     margin-top: 5%;
 }
 .abt-img {
-    height: 300px;
+    height: 30rem;
 }
 
 
@@ -447,17 +451,17 @@ a {
 }
 
 .heading-content-valo{
-    margin-left: 65%;
-    margin-top: 65%;
+    margin-left: 40%;
+    margin-top: 40%;
 }
 .main-heading-valo{
-    font-size: 150px;
-    letter-spacing: 10px;
+    font-size: 15rem;
+    letter-spacing: 1rem;
 }
 .container-valo{
-    padding-left: 140px;
+    padding-left: 14rem;
     margin-left: 40%;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .video-bg-valo > video {
@@ -481,26 +485,27 @@ a {
 
 .main-heading-cod{
     text-align: center;
-    font-size: 150px;
+    font-size: 15rem;
 }
 
 .heading-content-cod{
-    margin-top: 25%;
-    margin-left: 150px;
+    margin-top: 15%;
+    /* margin-left: 15rem; */
 }
 .container-cod{
-    margin-left: 40%;
-    margin-top: 30px;
+    margin-left: 45%;
+    margin-top: 3rem;
 }
 
 .heading-content-chess{
     margin-top: 25%;
-    margin-left: 150px;
+    /* text-align:center; */
+    margin-left: 15rem;
 }
 
 .container-chess{
     letter-spacing: 0;
-    margin-top: 20px;
+    margin-top: 2rem;
     margin-left: 40%;
 }
 
@@ -514,10 +519,108 @@ a {
 
 .footer-text{
     font-weight: 300;
-    margin-top: 35px;
+    margin-top: 3.5rem;
     margin-left: 40%;
 }
 
+
+@media (max-width:770px)
+{
+    html{
+        font-size:35%;
+    }
+    .heading-content{
+        margin-left:15%;
+    }
+    .about-para{
+        font-size:2.5rem;
+    }
+    .video-bg-valo{
+        height:100vh;
+    }
+    .heading-content-valo{
+        margin-left:35%;
+        margin-top:60%;
+    }
+    .heading-content-cod{
+        margin-top:30%;
+    }
+    .heading-content-chess{
+        margin-top:35%;
+    }
+    .button_slide{
+        font-size:2rem;
+    }
+}
+
+@media(max-width:500px)
+{
+    html{
+        font-size: 20%;
+    }
+    .navbar{
+        padding-top: 5rem;
+    }
+    .logo{
+        top:5rem;
+    }
+    .image{
+        width:10rem;
+        height:10rem;
+    }
+    .image2{
+        margin-top: 10rem;
+    }
+    .heading-content{
+        text-align: center;
+        margin-left:3%;
+        margin-right:3%;
+        margin-top:50%;
+    }
+    .main-heading{
+        font-size:20rem;
+    }
+    .second-heading{
+      font-size: 5rem;
+      line-height: 1.3;
+    }
+    .content{
+        text-align:center;
+        margin-top:20%;
+    }
+    .about-para{
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        font-size:5rem;
+    }
+    .video-bg-valo{
+        height:110vh;
+    }
+    .heading-content-valo{
+        margin-left:22%;
+        margin-top:150%;
+    }
+    .container-valo{
+        margin-left:12%;
+    }
+    .button_slide{
+        font-size:5rem;
+    }
+    .container-cod{
+        margin-left:35%;
+    }
+    .heading-content-cod{
+        margin-top:100%;
+    }
+    .heading-content-chess{
+        margin-left:2rem;
+        margin-top:100%;
+    }
+    .container-chess{
+        margin-left:35%;
+    }
+}
 
 
 

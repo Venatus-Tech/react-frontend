@@ -10,7 +10,9 @@
       margin: 0;
       padding: 0;
     }
-
+    html {
+      font-size: 62.5%;
+    }
     body {
       background-image: url(./img/chess.jpg);
       margin-top: 30px;
@@ -132,6 +134,7 @@
       border-radius: 6px;
       width: 533px;
       box-sizing: border-box;
+      font-size: initial;
     }
     .rules{
     color: #FFFFFF;
@@ -149,7 +152,7 @@ background-color: rgb(26 10 23 / 32%);
          font-size: large;
    }
 
-    button {
+    .chess-btn {
       background-color: #3baf9f;
       display: block;
 
@@ -164,8 +167,46 @@ background-color: rgb(26 10 23 / 32%);
       transition: 0.25px;
     }
 
-    button:hover {
+    .chess-btn:hover {
       background-color: #5390f5;
+    }
+
+    @media (max-width: 770px) {
+      .chess-btn {
+        margin-left: 250px;
+      }
+      .name {
+        margin-left: 50px;
+      }
+      .Screenshot {
+        left: 450px;
+        top: -30px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .regform {
+        font-size: 4rem;
+      }
+      .name {
+        font-size: 3.5rem;
+      }
+      .firstname,
+      .phone,
+      .email {
+        font-size: 3rem;
+      }
+      .pay {
+        font-size: 3rem;
+      }
+      .Screenshot {
+        top: -70px;
+        font-size: 2.3rem;
+      }
+      .chess-btn {
+        margin-left: 200px;
+        font-size: 4rem;
+      }
     }
   </style>
 
@@ -231,7 +272,8 @@ background-color: rgb(26 10 23 / 32%);
           placeholder="Enter Your Lichess Blitz Rating "
         /><br />
 
-        <p class="pay">Entry Fee : ₹30/ per person<br>
+        <p class="pay">
+          Entry Fee : ₹30/ per person<br />
           For Payment<br />
           NAME : Shagun Chandra<br />
           Paytm no: +91 9818107783<br />
@@ -246,7 +288,7 @@ background-color: rgb(26 10 23 / 32%);
           id="payment"
           required
         />
-        <button type="submit">Register Now</button>
+        <button class="chess-btn" type="submit">Register</button>
       </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
